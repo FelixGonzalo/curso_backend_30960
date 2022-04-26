@@ -15,7 +15,7 @@ app.get("/productos", (req, res) => {
     .then((data) => res.send(data))
     .catch((error) => {
       console.log(error.message);
-      res.send(error.message);
+      res.send({ error: error.message });
     });
 });
 
@@ -28,7 +28,7 @@ app.get("/productoRandom", (req, res) => {
     })
     .catch((error) => {
       console.log(error.message);
-      res.send(error.message);
+      res.send({ error: error.message });
     });
 });
 
