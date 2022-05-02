@@ -1,5 +1,6 @@
 const productsRouter = require('express').Router()
-const { products, initialContID } = require('../../store/fakeProducts')
+const FakeProductsDB = require('../../store/fakeProductDB')
+const productsDB = new FakeProductsDB()
 
 productsRouter.get('', getAllProducts)
 productsRouter.get('/:id', getProductById)
@@ -8,41 +9,35 @@ productsRouter.put('/:id', validateProduct, putProduct)
 productsRouter.delete('/:id', deleteProducto)
 
 function getAllProducts (req, res) {
-  res.json(products)
+  res.json(productsDB.getAllProducts())
 }
 
 function getProductById (req, res) {
   const { id } = req.params
-  const product = products.find(obj => obj.id === parseInt(id))
+  const product = productsDB.getProductById(id)
   if (!product) return res.json({ error: 'producto no encontrado' })
   res.json(product)
 }
 
-let contID = initialContID
 function postProduct (req, res) {
-  contID++
   const { title, price, thumbnail } = req.body
-  const newProduct = { id: contID, title, price: Number(price), thumbnail }
-  products.push(newProduct)
+  const newProduct = productsDB.postProduct({ title, price, thumbnail })
   res.json(newProduct)
 }
 
 function putProduct (req, res) {
   const { id } = req.params
-  const index = products.findIndex(product => product.id === parseInt(id))
-  if (index < 0) return res.json({ error: 'producto no encontrado para editar' })
   const { title, price, thumbnail } = req.body
-  const updateProduct = { id: parseInt(id), title, price, thumbnail }
-  products.splice(index, 1, updateProduct)
+  const updateProduct = productsDB.putProduct({ id, title, price, thumbnail })
+  if (!updateProduct) return res.json({ error: 'producto no encontrado para editar' })
   res.send(updateProduct)
 }
 
 function deleteProducto (req, res) {
   const { id } = req.params
-  const index = products.findIndex(product => product.id === parseInt(id))
-  if (index < 0) return res.json({ error: 'producto no encontrado para eliminar' })
-  products.splice(index, 1)
-  res.json(id)
+  const deletedId = productsDB.deleteProducto(id)
+  if (!deletedId) return res.json({ error: 'producto no encontrado para eliminar' })
+  res.json({ id })
 }
 
 // helpers
