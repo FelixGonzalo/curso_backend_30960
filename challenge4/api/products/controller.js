@@ -2,11 +2,11 @@ const productsRouter = require('express').Router()
 const FakeProductsDB = require('../../store/fakeProductDB')
 const productsDB = new FakeProductsDB()
 
-productsRouter.get('', getAllProducts)
+productsRouter.get('/', getAllProducts)
 productsRouter.get('/:id', getProductById)
-productsRouter.post('', validateProduct, postProduct)
+productsRouter.post('/', validateProduct, postProduct)
 productsRouter.put('/:id', validateProduct, putProduct)
-productsRouter.delete('/:id', deleteProducto)
+productsRouter.delete('/:id', deleteProduct)
 
 function getAllProducts (req, res) {
   res.json(productsDB.getAllProducts())
@@ -33,7 +33,7 @@ function putProduct (req, res) {
   res.send(updateProduct)
 }
 
-function deleteProducto (req, res) {
+function deleteProduct (req, res) {
   const { id } = req.params
   const deletedId = productsDB.deleteProducto(id)
   if (!deletedId) return res.json({ error: 'producto no encontrado para eliminar' })
