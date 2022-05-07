@@ -1,0 +1,17 @@
+extend layout/template.pug
+block content
+  div.container
+    h1 Crear Producto
+    if error
+      div(class="alert alert-danger")=error
+    form(action="/product" method="POST")
+      div.mb-3
+        label(for="title" class="form-label") Nombre
+        input(type="text" id="title" name="title"  class="form-control" value=title)
+      div.mb-3
+        label(for="price" class="form-label") Precio
+        input(type="text" id="price", name="price"  class="form-control" value=price)
+      div.mb-3
+        label(for="thumbnail" class="form-label") Foto 
+        input(type="text" id="thumbnail" name="thumbnail"  class="form-control" value=thumbnail)
+      button(class="btn btn-success") Crear Producto

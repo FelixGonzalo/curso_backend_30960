@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('./layout/head'); %>
+  <body>
+    <%- include('./layout/header'); %>
+    <div class="container">
+      <h1>Vista de Productos</h1>
+      <% if (products && products.length > 0) { %>
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th>NOMBRE</th>
+              <th>PRECIO</th>
+              <th>FOTO</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% products.forEach(function(product){ %>
+            <tr>
+              <td><%= product.title %></td>
+              <td><%= product.price %></td>
+              <td>
+                <img
+                  src="<%= product.thumbnail %>"
+                  alt="<%= product.price %>"
+                  width="100px"
+                />
+              </td>
+            </tr>
+            <% }); %>
+          </tbody>
+        </table>
+      </div>
+      <%} else { %>
+      <div class="alert alert-danger">No hay productos</div>
+      <% } %>
+    </div>
+  </body>
+</html>

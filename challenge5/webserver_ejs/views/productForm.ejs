@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('./layout/head'); %>
+  <body>
+    <%- include('./layout/header'); %>
+    <div class="container">
+      <h1>Crear Producto</h1>
+      <% if (error) { %>
+      <div class="alert alert-danger"><%= error %></div>
+      <% } %>
+      <form action="/product" method="POST">
+        <div class="mb-3">
+          <label for="title" class="form-label">Nombre</label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            class="form-control"
+            value="<%= title %>"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="price" class="form-label">Precio</label>
+          <input
+            type="text"
+            id="price"
+            name="price"
+            class="form-control"
+            value="<%= price %>"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="thumbnail" class="form-label">Foto</label>
+          <input
+            type="text"
+            id="thumbnail"
+            name="thumbnail"
+            class="form-control"
+            value="<%= thumbnail %>"
+          />
+        </div>
+        <button class="btn btn-success">Crear Producto</button>
+      </form>
+    </div>
+  </body>
+</html>

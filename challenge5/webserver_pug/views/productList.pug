@@ -1,0 +1,21 @@
+extend layout/template.pug
+block content
+  div.container
+    h1 Vista de Productos
+    if products && products.length > 0
+      div.table-responsive
+        table(class="table table-hover")
+          thead 
+            tr
+              th NOMBRE
+              th PRECIO
+              th FOTO
+          tbody 
+            each product in products
+              tr
+                td=product.title
+                td=product.price
+                td(width="120px")
+                  img(src=product.thumbnail , alt=product.title width="100px")
+    else
+      div(class="alert alert-danger") No hay productos
