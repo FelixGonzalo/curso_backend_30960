@@ -27,23 +27,22 @@ const keys = {
   CHAT_ERROR: 'CHAT_ERROR',
 }
 
-const main = async () => {
-  try {
-    const messages = await chatDB.getAllMessages()
-    console.log(messages)
-
-    io.on('connection', (socket) => {
-      console.log('Un cliente se ha conectado')
+io.on('connection', (socket) => {
+  console.log('Un cliente se ha conectado')
+  const main = async () => {
+    try {
+      const messages = await chatDB.getAllMessages()
       socket.emit(keys.PRODUCTS, productsDB.getAllProducts())
       socket.emit(keys.CHAT_MESSAGES, messages)
       socket.on(keys.ADD_PRODUCT, addProduct)
       socket.on(keys.CHAT_ADD_MESSAGE, addMessage)
-    })
-  } catch (error) {
-    console.error(error)
+    } catch (error) {
+      console.error(error)
+    }
   }
-}
-main()
+  main()
+})
+
 httpServer.listen(PORT, () => console.log(`Open server on port ${PORT}`))
 
 // ADD PRODUCT Y ADD MESSAGE
