@@ -5,9 +5,7 @@ const { Server: IOServer } = require('socket.io')
 
 const FakeProductsDB = require('./store/fakeProductDB')
 const productsDB = new FakeProductsDB()
-
-const FakeChatDB = require('./store/fakeChatDB')
-const chatDB = new FakeChatDB()
+const chatDB = require('./store/chatDB')
 
 const PORT = 8080
 const app = express()
@@ -29,14 +27,26 @@ const keys = {
   CHAT_ERROR: 'CHAT_ERROR',
 }
 
-io.on('connection', (socket) => {
-  console.log('Un cliente se ha conectado')
-  socket.emit(keys.PRODUCTS, productsDB.getAllProducts())
-  socket.emit(keys.CHAT_MESSAGES, chatDB.getAllMessages())
+const main = async () => {
+  try {
+    const messages = await chatDB.getAllMessages()
+    console.log(messages)
 
-  socket.on(keys.ADD_PRODUCT, addProduct)
-  socket.on(keys.CHAT_ADD_MESSAGE, addMessage)
-})
+    io.on('connection', (socket) => {
+      console.log('Un cliente se ha conectado')
+      socket.emit(keys.PRODUCTS, productsDB.getAllProducts())
+      socket.emit(keys.CHAT_MESSAGES, messages)
+      socket.on(keys.ADD_PRODUCT, addProduct)
+      socket.on(keys.CHAT_ADD_MESSAGE, addMessage)
+    })
+  } catch (error) {
+    console.error(error)
+  }
+}
+main()
+httpServer.listen(PORT, () => console.log(`Open server on port ${PORT}`))
+
+// ADD PRODUCT Y ADD MESSAGE
 
 function addProduct(data) {
   const { title, price, thumbnail } = data
@@ -50,15 +60,23 @@ function addProduct(data) {
   io.sockets.emit(keys.PRODUCTS_ERROR, null)
 }
 
-function addMessage(data) {
+async function addMessage(data) {
   const { email, message } = data
   const newMessage = { email, message, date: Date.now() }
   const error = validateMessage(newMessage)
   if (error) return io.sockets.emit(keys.CHAT_ERROR, error)
-  chatDB.addMessage(newMessage)
-  io.sockets.emit(keys.CHAT_MESSAGES, chatDB.getAllMessages())
-  io.sockets.emit(keys.CHAT_ERROR, null)
+  try {
+    const id = await chatDB.addMessage(newMessage)
+    const messages = await chatDB.getAllMessages()
+    console.log(`Message guardado con ID: ${id}`)
+    io.sockets.emit(keys.CHAT_MESSAGES, messages)
+    io.sockets.emit(keys.CHAT_ERROR, null)
+  } catch (error) {
+    console.error(error)
+  }
 }
+
+// VALIDACIONES
 
 function validateProduct(product) {
   const { title, price, thumbnail } = product
@@ -85,5 +103,3 @@ function validateMessage(data) {
   }
   return error
 }
-
-httpServer.listen(PORT, () => console.log(`Open server on port ${PORT}`))
