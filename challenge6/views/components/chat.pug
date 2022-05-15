@@ -1,0 +1,10 @@
+div.pb-4
+  h2 Centro de Mensajes
+  div(id="messageList")
+  div(style="max-width:600px") 
+    form(id="chatForm")
+      div(class="input-group")
+        input(type="text" id="email" class="form-control text-danger" placeholder="email" autocomplete="off")
+        input(type="text" id="message" class="form-control"  placeholder="mensaje" autocomplete="off")
+        button(class="btn btn-secondary") Enviar
+    div(id="chatFormError")
