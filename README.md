@@ -13,6 +13,7 @@ En este repositorio puedes acceder a todos los desafíos del curso resueltos por
 - [Desafío 3](./challenge3) Servidor con Express
 - [Desafío 4](./challenge4) API RESTful
 - [Desafío 5](./challenge5) Motores de plantillas
+- [Desafío 6](./challenge6) Websockets
 - ...
 
 ## 🤓 Repo del profe
