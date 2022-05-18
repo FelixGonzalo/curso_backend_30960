@@ -3,6 +3,7 @@
 En este repositorio puedes acceder a todos los desafíos del curso resueltos por mí.
 
 - Comisión: 30960
+- Profesor: Marcos Villanueva
 - Comienza: 04 abril 2022
 - Termina: 14 septiembre 2022
 
