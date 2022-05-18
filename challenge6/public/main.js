@@ -1,8 +1,9 @@
 const socket = io.connect()
 // PRODUCTOS
 const productForm = document.getElementById('productForm')
-const tbodyProducts = document.getElementById('tbodyProducts')
-const productFormError = document.getElementById('productFormError')
+// const tbodyProducts = document.getElementById('tbodyProducts') // sin usar handlebars
+const tableProducts = document.getElementById('tableProducts')
+const productFormError = document.getElementById('productFormError') // usando handlebars
 // CHAT
 const messageList = document.getElementById('messageList')
 const chatForm = document.getElementById('chatForm')
@@ -16,7 +17,8 @@ const keys = {
 }
 const API = 'http://localhost:8080'
 
-socket.on(keys.PRODUCTS, renderProductList)
+// socket.on(keys.PRODUCTS, renderProductList) // sin usar handlebars
+socket.on(keys.PRODUCTS, renderProductList_handlebars) // usando handlebars
 socket.on(keys.CHAT_MESSAGES, renderChatMessages)
 
 productForm.addEventListener('submit', handleSubmit_productForm)
@@ -106,6 +108,16 @@ function renderProductList(data) {
   tbodyProducts.innerHTML = htmlProductList
 }
 
+function renderProductList_handlebars(data) {
+  fetch(`${API}/productList.handlebars`)
+    .then((res) => res.text())
+    .then((res) => {
+      const template = Handlebars.compile(res)
+      const html = template({ products: data })
+      tableProducts.innerHTML = html
+    })
+}
+
 function renderChatMessages(data) {
   const htmlMessageList = data
     .map((message) => {
@@ -139,3 +151,20 @@ function renderChatError(error) {
       </div>
       `
 }
+
+const products = [
+  {
+    title: 'asd',
+    price: '100',
+    thumbnail:
+      'https://cdn3.iconfinder.com/data/icons/spring-2-1/30/Clouds-256.png',
+    id: 1,
+  },
+  {
+    title: 'asd',
+    price: '12',
+    thumbnail:
+      'https://cdn3.iconfinder.com/data/icons/spring-2-1/30/Moth-256.png',
+    id: 2,
+  },
+]

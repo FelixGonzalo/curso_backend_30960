@@ -1,1 +1,1 @@
-[{"title":"asd","price":"100","thumbnail":"https://cdn3.iconfinder.com/data/icons/spring-2-1/30/Clouds-256.png","id":1},{"title":"asd","price":"12","thumbnail":"https://cdn3.iconfinder.com/data/icons/spring-2-1/30/Moth-256.png","id":2}]
+[]
