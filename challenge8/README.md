@@ -8,7 +8,8 @@ dos colecciones: mensajes y productos.
 terminal 1:
 
 ```
---dbpath=/home/felix/Desktop/fekilo/ecommerce
+// crear la carpeta ecommerce en ruta X.
+--dbpath=/rutaX/ecommerce
 ```
 
 terminal 2:
