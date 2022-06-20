@@ -1,4 +1,6 @@
 require('dotenv').config()
+require('./store/firebase/connection')
+
 const express = require('express')
 const productsRouter = require('./api/products/controller')
 const chatRouter = require('./api/chat/controller')
@@ -33,15 +35,20 @@ const keys = {
 
 async function main(socket) {
   console.log('A client has connected')
+  let messages = []
+  let products = []
   try {
-    const messages = await chatDB.getAllMessages()
-    const products = await productsDB.getAllProducts()
+    // messages = await chatDB.getAllMessages()
+    messages = await chatDB.getAllMessagesNormalized()
+    products = await productsDB.getAllProducts()
+  } catch (error) {
+    console.error(error)
+  } finally {
     socket.emit(keys.PRODUCTS, products)
     socket.emit(keys.CHAT_MESSAGES, messages)
     socket.on(keys.ADD_PRODUCT, sendProducts)
-    socket.on(keys.CHAT_ADD_MESSAGE, sendMessages)
-  } catch (error) {
-    console.error(error)
+    // socket.on(keys.CHAT_ADD_MESSAGE, sendMessages)
+    socket.on(keys.CHAT_ADD_MESSAGE, sendMessagesNormalized)
   }
 }
 
@@ -61,6 +68,12 @@ function sendProducts() {
 
 function sendMessages() {
   chatDB.getAllMessages().then((data) => {
+    io.sockets.emit(keys.CHAT_MESSAGES, data)
+  })
+}
+
+function sendMessagesNormalized() {
+  chatDB.getAllMessagesNormalized().then((data) => {
     io.sockets.emit(keys.CHAT_MESSAGES, data)
   })
 }

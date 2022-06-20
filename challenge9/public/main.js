@@ -19,7 +19,8 @@ const API = 'http://localhost:8080'
 
 // socket.on(keys.PRODUCTS, renderProductList) // sin usar handlebars
 socket.on(keys.PRODUCTS, renderProductList_handlebars) // usando handlebars
-socket.on(keys.CHAT_MESSAGES, renderChatMessages)
+// socket.on(keys.CHAT_MESSAGES, renderChatMessages)
+socket.on(keys.CHAT_MESSAGES, renderChatMessagesNormalized)
 
 productForm.addEventListener('submit', handleSubmit_productForm)
 chatForm.addEventListener('submit', handleSubmit_chatForm)
@@ -38,8 +39,16 @@ function handleSubmit_productForm(event) {
 
 function handleSubmit_chatForm(event) {
   event.preventDefault()
-  const { email, message } = event.target
-  addMessage({ email: email.value, message: message.value })
+  const { email, name, lastName, age, nick, avatar, text } = event.target
+  addMessage({
+    email: email.value,
+    name: name.value,
+    lastName: lastName.value,
+    age: age.value,
+    nick: nick.value,
+    avatar: avatar.value,
+    text: text.value,
+  })
 }
 
 // API SERVICE
@@ -47,7 +56,7 @@ function handleSubmit_chatForm(event) {
 function addProduct({ title, price, thumbnail }) {
   const newProduct = { title, price, thumbnail }
 
-  fetch(`${API}/products`, {
+  fetch(`${API}/api/products`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -64,10 +73,18 @@ function addProduct({ title, price, thumbnail }) {
     .catch((error) => console.error(error))
 }
 
-function addMessage({ email, message }) {
-  const newMessage = { email, message, date: Date.now() }
-
-  fetch(`${API}/chat`, {
+function addMessage({ email, name, lastName, age, nick, avatar, text }) {
+  const newMessage = {
+    email,
+    name,
+    lastName,
+    age,
+    nick,
+    avatar,
+    text,
+    date: Date.now(),
+  }
+  fetch(`${API}/api/chat`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -79,7 +96,7 @@ function addMessage({ email, message }) {
       if (res.error) return renderChatError(res.error)
       socket.emit(keys.CHAT_ADD_MESSAGE)
       chatFormError.innerHTML = ''
-      chatForm.message.value = ''
+      chatForm.text.value = ''
     })
     .catch((error) => console.error(error))
 }
@@ -123,13 +140,64 @@ function renderChatMessages(data) {
     .map((message) => {
       return `
       <p>
-        <span class="fw-bold text-danger">${message.email}</span>
+        <img style="width: 30px; border-radius: 100%" src="${
+          message.author.avatar.startsWith('http')
+            ? message.author.avatar
+            : 'https://castillotrans.eu/wp-content/uploads/2019/06/77461806-icono-de-usuario-hombre-hombre-avatar-avatar-pictograma-pictograma-vector-ilustraci%C3%B3n-300x300.jpg'
+        }">
+        <span class="fw-bold text-danger">${message.author.id}</span>
         <span class="fw-bold text-success">(${new Date(
           message.date
         ).toLocaleString()}): </span>
-        <span>${message.message}</span>
+        <span>${message.text}</span>
       </p>
     `
+    })
+    .join('')
+
+  messageList.innerHTML = htmlMessageList
+}
+
+function renderChatMessagesNormalized(data) {
+  const authorSchema = new normalizr.schema.Entity('authors')
+  const messageSchema = new normalizr.schema.Entity('messages', {
+    author: authorSchema,
+  })
+  const chat = new normalizr.schema.Entity('chat', {
+    messages: [messageSchema],
+  })
+  const dataDenormalized = normalizr.denormalize(
+    data.result,
+    chat,
+    data.entities
+  )
+
+  const reductionPercentage = Math.floor(
+    100 -
+      (JSON.stringify(data).length * 100) /
+        JSON.stringify(dataDenormalized).length
+  )
+  console.log('Porcentaje de reducción')
+  console.log(reductionPercentage + '%')
+  document.getElementById('reductionPercentage').innerHTML =
+    'Porcentaje de reducción: ' + reductionPercentage + '%'
+
+  const htmlMessageList = dataDenormalized.messages
+    .map((message) => {
+      return `
+    <p>
+      <img style="width: 30px; border-radius: 100%" src="${
+        message.author.avatar.startsWith('http')
+          ? message.author.avatar
+          : 'https://castillotrans.eu/wp-content/uploads/2019/06/77461806-icono-de-usuario-hombre-hombre-avatar-avatar-pictograma-pictograma-vector-ilustraci%C3%B3n-300x300.jpg'
+      }">
+      <span class="fw-bold text-danger">${message.author.id}</span>
+      <span class="fw-bold text-success">(${new Date(
+        message.date
+      ).toLocaleString()}): </span>
+      <span>${message.text}</span>
+    </p>
+  `
     })
     .join('')
 

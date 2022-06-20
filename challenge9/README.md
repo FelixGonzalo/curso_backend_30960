@@ -1,17 +1,32 @@
-# Desafío 7: Nuestra primera base de datos
+# Desafío 9: Mocks y normalización
 
-Para ejecutar correctamente el proyecto:
+## Consigna 1:
 
-1. Cree una base de datos (MySQL o MariaDB) con nombre: **products** mediante su gestor favorito.
+- Lista de 5 productos para test en endpoint: **/api/products/test**
+- Ruta donde se muestra la vista con los productos de test: **/test/products**
 
-2. Ejecute el script **DBscript** para crear o resetear:
+## Consigna 2:
 
-   - La tabla products en la BD products en MySQL o MariaDB.
-   - La tabla messages en SQLite3.
+- El chat ahora muestra el porcentaje de reducción al manejar data normalizada.
+- Los mensajes tiene el nuevo formato y se guardan en firebase.
+
+## Para ejecutar correctamente el proyecto:
+
+1. Ejecute el script **DBscript** para crear o resetear:
+
+   - La tabla products en SQLite3.
 
    ```
      npm run DBscript
    ```
+
+2. Defina el api key de firebase en el archivo .env acorde al archivo .env.example
+
+```
+FIREBASE_KEY =
+  '{"type": "service_account" ...}'
+
+```
 
 3. Ejecute el siguiente script para iniciar el proyecto
 
