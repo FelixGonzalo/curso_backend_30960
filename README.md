@@ -17,6 +17,7 @@ En este repositorio puedes acceder a todos los desafíos del curso resueltos por
 - [Desafío 6](./challenge6) Websockets
 - [Desafío 7](./challenge7) Nuestra primera base de datos
 - [Desafío 8](./challenge8) MongoDB
+- [Desafío 9](./challenge9) Mocks y normalización
 - ...
 
 ## 🤓 Repo del profe
