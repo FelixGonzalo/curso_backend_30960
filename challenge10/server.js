@@ -20,8 +20,7 @@ const io = new IOServer(httpServer)
 app.use(
   session({
     store: MongoStore.create({
-      mongoUrl:
-        'mongodb+srv://fekilo:fekilo@cluster0.mcbzk.mongodb.net/?retryWrites=true&w=majority',
+      mongoUrl: process.env.MONGO_URL,
       mongoOptions: {
         useNewUrlParser: true,
         useUnifiedTopology: true,

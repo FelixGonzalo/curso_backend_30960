@@ -1,16 +1,4 @@
-# Desafío 9: Mocks y normalización
-
-## Consigna 1:
-
-- Lista de 5 productos para test en endpoint: **/api/products/test**
-- Ruta donde se muestra la vista con los productos de test: **/test/products**
-
-## Consigna 2:
-
-- El chat ahora muestra el porcentaje de reducción al manejar data normalizada.
-- Los mensajes tiene el nuevo formato y se guardan en firebase.
-
-## Para ejecutar correctamente el proyecto:
+# Desafío 10: Login con session de usuario
 
 1. Ejecute el script **DBscript** para crear o resetear:
 
