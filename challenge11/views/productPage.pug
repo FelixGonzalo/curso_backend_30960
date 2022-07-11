@@ -1,0 +1,13 @@
+extend layout/homeTemplate.pug
+block content
+  div.container.mt-4.pt-4
+    include components/userLogoutAlert.pug
+    h1 Productos
+    hr.mb-4
+    div.row
+      div.col-md-4.mb-4
+        include components/productForm.pug
+      div.col-md-8
+        include components/productList.pug
+    div.mt-4
+      include components/chat.pug

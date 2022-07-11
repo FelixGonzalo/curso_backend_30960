@@ -19,6 +19,7 @@ En este repositorio puedes acceder a todos los desafíos del curso resueltos por
 - [Desafío 8](./challenge8) MongoDB
 - [Desafío 9](./challenge9) Mocks y normalización
 - [Desafío 10](./challenge10/) LOG-IN por formulario
+- [Desafío 11](./challenge11/) Inicio de sesión
 - ...
 
 ## 🤓 Repo del profe
