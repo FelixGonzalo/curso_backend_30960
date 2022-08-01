@@ -1,4 +1,5 @@
 const systemRouter = require('express').Router()
+const os = require('os')
 
 systemRouter.get('/', getSystemInformation)
 
@@ -10,7 +11,8 @@ function getSystemInformation(req, res){
     'Memoria total reservada (rss)': process.memoryUsage().rss,
     'Path de ejecución':  process.argv.slice(0),
     'Proccess id': process.pid,
-    'Carpeta del proyecto': process.cwd()
+    'Carpeta del proyecto': process.cwd(),
+    'Número de procesadores': os.cpus().length,
   })
 }
 
