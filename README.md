@@ -21,6 +21,7 @@ En este repositorio puedes acceder a todos los desafíos del curso resueltos por
 - [Desafío 10](./challenge10/) LOG-IN por formulario
 - [Desafío 11](./challenge11/) Inicio de sesión
 - [Desafío 12](./challenge12/) Usando el objeto process
+- [Desafío 13](./challenge13/) Servidor con balance de carga
 - ...
 
 ## 🤓 Repo del profe

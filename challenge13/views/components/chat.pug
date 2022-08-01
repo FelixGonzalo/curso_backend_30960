@@ -1,0 +1,18 @@
+div.pb-4
+  h2 Centro de Mensajes
+  p(id="reductionPercentage" style="font-weight: bold")
+  div(id="messageList")
+  div(style="max-width:600px") 
+    form(id="chatForm")
+      div(class="input-group")
+        input(type="text" id="email" class="form-control text-danger" placeholder="email" autocomplete="off")
+        input(type="text" id="name" class="form-control text-danger" placeholder="nombre" autocomplete="off")
+        input(type="text" id="lastName" class="form-control text-danger" placeholder="apellidos" autocomplete="off")
+      div(class="input-group")
+        input(type="text" id="age" class="form-control text-danger" placeholder="edad" autocomplete="off")
+        input(type="text" id="nick" class="form-control text-danger" placeholder="alias" autocomplete="off")
+        input(type="text" id="avatar" class="form-control text-danger" placeholder="avatar" autocomplete="off")
+      div(class="input-group")
+        input(type="text" id="text" class="form-control"  placeholder="mensaje" autocomplete="off")
+        button(class="btn btn-secondary") Enviar
+    div(id="chatFormError")
