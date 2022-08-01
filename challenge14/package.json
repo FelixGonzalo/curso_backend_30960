@@ -1,0 +1,33 @@
+{
+  "name": "challenge7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js -p 8080 -m FORK",
+    "DBscript": "node ./store/script.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cluster": "^0.7.7",
+    "connect-mongo": "^4.6.0",
+    "dotenv": "16.0.1",
+    "express": "4.18.1",
+    "express-session": "^1.17.3",
+    "firebase-admin": "11.0.0",
+    "knex": "^2.1.0",
+    "minimist": "^1.2.6",
+    "mysql": "2.18.1",
+    "nodemon": "2.0.16",
+    "normalizr": "3.6.2",
+    "pug": "3.0.2",
+    "socket.io": "4.5.0",
+    "sqlite3": "^5.0.8"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "7.2.0"
+  }
+}
