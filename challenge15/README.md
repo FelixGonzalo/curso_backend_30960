@@ -28,6 +28,4 @@ URL: https://backend-node-felix.herokuapp.com/
 
 Algunas capturas:
 
-![Captura1](./img1.png)
-
 ![Captura2](./img2.png)
