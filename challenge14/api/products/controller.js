@@ -1,4 +1,5 @@
 const productsRouter = require('express').Router()
+const logger = require('../../logger')
 const model = require('./model')
 
 productsRouter.post('/', validateProduct, postProduct)
@@ -7,6 +8,7 @@ productsRouter.get('/test', getProductsTest)
 function postProduct(req, res) {
   const { error } = req
   if (error && error.length > 0) {
+    logger.error('Error postProduct: ' + error)
     return res.json({ error })
   }
   const { title, price, thumbnail } = req.body
@@ -15,6 +17,7 @@ function postProduct(req, res) {
     .then((productID) => res.json({ productID }))
     .catch((error) => {
       console.error(error)
+      logger.error('Error postProduct: ' + error.message)
       res.json({ error: 'Error en la operación' })
     })
 }

@@ -1,6 +1,7 @@
 const chatRouter = require('express').Router()
 const model = require('./model')
 const bcrypt = require('bcrypt')
+const logger = require('../../logger')
 const saltRounds = 2
 
 chatRouter.post('/register', validateUserData, register)
@@ -14,6 +15,7 @@ async function register(req, res) {
     const users = await model.getAllUsers()
     const foundUser = users.find((user) => user.email === email)
     if (foundUser) {
+      logger.error('Error en register: El correo ya está registrado')
       return res.status(400).json({
         error: true,
         session: {
@@ -28,6 +30,7 @@ async function register(req, res) {
 
     await model.addUser({ email, password: passwordHash })
     req.session.userName = email
+    logger.info('Registro de usuario exitoso')
     return res.status(201).json({
       error: false,
       session: {
@@ -38,6 +41,7 @@ async function register(req, res) {
     })
   } catch (error) {
     console.error(error)
+    logger.error('Error en register: ' + error.message)
     return res.status(500).json({
       error: true,
       session: {
@@ -53,6 +57,7 @@ function login(req, res) {
   const { email, password } = req.body
   const userSession = req.session.email
   if (userSession) {
+    logger.info('El usuario ${userSession} ha iniciado sesión antes')
     return res.status(200).json({
       error: false,
       session: {
@@ -69,6 +74,7 @@ function login(req, res) {
       const foundUser = users.find((user) => user.email === email)
 
       if (!foundUser) {
+        logger.error('Error al iniciar sesión: Error en credenciales')
         return res.status(400).json({
           error: true,
           session: {
@@ -81,6 +87,7 @@ function login(req, res) {
 
       bcrypt.compare(password, foundUser.password).then(function (result) {
         if (!result) {
+          logger.error('Error al iniciar sesión: Error en credenciales')
           return res.status(400).json({
             error: true,
             session: {
@@ -92,7 +99,7 @@ function login(req, res) {
         }
 
         req.session.userName = email
-
+        logger.info(`Usuario ${email} ha iniciado sesión`)
         res.status(200).json({
           error: false,
           session: {
@@ -105,6 +112,7 @@ function login(req, res) {
     })
     .catch((error) => {
       console.log(error)
+      logger.error('Error al iniciar sesión: ' + error.message)
       return res.status(500).json({
         error: true,
         session: {

@@ -1,4 +1,5 @@
 const chatRouter = require('express').Router()
+const logger = require('../../logger')
 const model = require('./model')
 
 chatRouter.post('/', validateMessage, postMessage)
@@ -13,6 +14,7 @@ function getTestMessages(req, res) {
 function postMessage(req, res) {
   const { error } = req
   if (error && error.length > 0) {
+    logger.error('Error postMessage: ' + error)
     return res.json({ error })
   }
   const { email, name, lastName, age, nick, avatar, text } = req.body
@@ -30,6 +32,7 @@ function postMessage(req, res) {
     .then((messageID) => res.json({ messageID }))
     .catch((error) => {
       console.error(error)
+      logger.error('Error postMessage: ' + error.message)
       res.json({ error: 'Error en la operación' })
     })
 }

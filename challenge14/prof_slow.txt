@@ -1,0 +1,1204 @@
+Statistical profiling result from slow-v8.log, (7054 ticks, 3 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   5413   76.7%          /usr/bin/node
+    150    2.1%          /usr/lib/x86_64-linux-gnu/libc-2.31.so
+     16    0.2%          /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
+      2    0.0%          [vdso]
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+     26    0.4%    1.8%  LazyCompile: *resolve node:path:1091:10
+      8    0.1%    0.5%  LazyCompile: *readPackage node:internal/modules/cjs/loader:290:21
+      7    0.1%    0.5%  LazyCompile: *Module._nodeModulePaths node:internal/modules/cjs/loader:629:37
+      6    0.1%    0.4%  LazyCompile: *next /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/index.js:177:16
+      5    0.1%    0.3%  LazyCompile: *deserializeObject /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/parser/deserializer.js:65:27
+      5    0.1%    0.3%  Function: ^validateString node:internal/validators:118:24
+      5    0.1%    0.3%  Function: ^deserializeObject /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/parser/deserializer.js:65:27
+      4    0.1%    0.3%  LazyCompile: *normalizeString node:path:66:25
+      4    0.1%    0.3%  LazyCompile: *emit node:events:474:44
+      4    0.1%    0.3%  Function: ^formatRaw node:internal/util/inspect:820:19
+      3    0.0%    0.2%  Function: ^value node:internal/console/constructor:300:20
+      3    0.0%    0.2%  Function: ^cpus node:os:133:14
+      2    0.0%    0.1%  RegExp: \u001b\[\d\d?m
+      2    0.0%    0.1%  RegExp: [^\t\x20-\x7e\x80-\xff]
+      2    0.0%    0.1%  RegExp: [\x00-\x1f\x27\x5c\x7f-\x9f]|[\ud800-\udbff](?![\udc00-\udfff])|(?<![\ud800-\udbff])[\udc00-\udfff]
+      2    0.0%    0.1%  RegExp: ;\s*charset\s*=
+      2    0.0%    0.1%  LazyCompile: *_write node:internal/streams/writable:283:16
+      2    0.0%    0.1%  LazyCompile: *_storeHeader node:_http_outgoing:374:22
+      2    0.0%    0.1%  LazyCompile: *Module._findPath node:internal/modules/cjs/loader:494:28
+      2    0.0%    0.1%  Function: ^session /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express-session/index.js:179:26
+      2    0.0%    0.1%  Function: ^send /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/response.js:111:25
+      2    0.0%    0.1%  Function: ^process_params /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/index.js:338:47
+      2    0.0%    0.1%  Function: ^next /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/route.js:116:16
+      2    0.0%    0.1%  Function: ^multiplication32 /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/modules/mersenne/twister.js:1:872
+      2    0.0%    0.1%  Function: ^listenerCount node:events:858:23
+      2    0.0%    0.1%  Function: ^getSystemInformation /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/api/system/controller.js:9:30
+      2    0.0%    0.1%  Function: ^formatPrimitive node:internal/util/inspect:1519:25
+      2    0.0%    0.1%  Function: ^createUnsafeBuffer node:internal/buffer:1059:28
+      2    0.0%    0.1%  Function: ^_send node:_http_outgoing:319:49
+      2    0.0%    0.1%  Function: ^Module._resolveLookupPaths node:internal/modules/cjs/loader:667:38
+      2    0.0%    0.1%  Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      2    0.0%    0.1%  Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      2    0.0%    0.1%  Function: ^<anonymous> node:buffer:349:36
+      1    0.0%    0.1%  RegExp: ^[\^_`a-zA-Z\-0-9!#$%&'*+.|~]+$
+      1    0.0%    0.1%  RegExp: ^[!#$%&'*+.^_`|~0-9A-Za-z-]+$
+      1    0.0%    0.1%  RegExp: =+$
+      1    0.0%    0.1%  RegExp: (?<=\n)
+      1    0.0%    0.1%  LazyCompile: *trim_prefix /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/index.js:293:23
+      1    0.0%    0.1%  LazyCompile: *set /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/application.js:359:23
+      1    0.0%    0.1%  LazyCompile: *realpathSync node:fs:2412:22
+      1    0.0%    0.1%  LazyCompile: *readSync node:fs:684:18
+      1    0.0%    0.1%  LazyCompile: *readPackageScope node:internal/modules/cjs/loader:321:26
+      1    0.0%    0.1%  LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1    0.0%    0.1%  LazyCompile: *nextTick node:internal/process/task_queues:104:18
+      1    0.0%    0.1%  LazyCompile: *formatValue node:internal/util/inspect:745:21
+      1    0.0%    0.1%  LazyCompile: *dirname node:path:1275:10
+      1    0.0%    0.1%  LazyCompile: *compileFunction node:vm:308:25
+      1    0.0%    0.1%  LazyCompile: *addListener node:events:622:58
+      1    0.0%    0.1%  LazyCompile: *Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1    0.0%    0.1%  LazyCompile: *Module._compile node:internal/modules/cjs/loader:1057:37
+      1    0.0%    0.1%  Function: ^writevGeneric node:internal/stream_base_commons:122:23
+      1    0.0%    0.1%  Function: ^writeOrBuffer node:internal/streams/writable:365:23
+      1    0.0%    0.1%  Function: ^writeHead /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/on-headers/index.js:28:29
+      1    0.0%    0.1%  Function: ^value node:internal/console/constructor:321:20
+      1    0.0%    0.1%  Function: ^update node:internal/crypto/hash:95:40
+      1    0.0%    0.1%  Function: ^sendFile /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/send/index.js:712:51
+      1    0.0%    0.1%  Function: ^resume_ node:internal/streams/readable:984:17
+      1    0.0%    0.1%  Function: ^resolve node:path:1091:10
+      1    0.0%    0.1%  Function: ^resetBuffer node:internal/streams/writable:202:21
+      1    0.0%    0.1%  Function: ^require node:internal/modules/cjs/helpers:101:31
+      1    0.0%    0.1%  Function: ^realpathSync node:fs:2412:22
+      1    0.0%    0.1%  Function: ^readPackageScope node:internal/modules/cjs/loader:321:26
+      1    0.0%    0.1%  Function: ^readFileSync node:fs:450:22
+      1    0.0%    0.1%  Function: ^processTimers node:internal/timers:487:25
+      1    0.0%    0.1%  Function: ^processTicksAndRejections node:internal/process/task_queues:68:35
+      1    0.0%    0.1%  Function: ^processPromiseRejections node:internal/process/promises:211:34
+      1    0.0%    0.1%  Function: ^parseFileMode node:internal/validators:59:23
+      1    0.0%    0.1%  Function: ^parse node:url:168:37
+      1    0.0%    0.1%  Function: ^parse /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/cmap/commands.js:426:10
+      1    0.0%    0.1%  Function: ^p /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/whatwg-url/lib/url-state-machine.js:10:11
+      1    0.0%    0.1%  Function: ^originalurl /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/parseurl/index.js:65:22
+      1    0.0%    0.1%  Function: ^onstat /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/send/index.js:717:33
+      1    0.0%    0.1%  Function: ^ondata node:internal/streams/readable:752:18
+      1    0.0%    0.1%  Function: ^once node:events:664:44
+      1    0.0%    0.1%  Function: ^onHeaders /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/on-headers/index.js:56:20
+      1    0.0%    0.1%  Function: ^onFinish node:_http_outgoing:828:18
+      1    0.0%    0.1%  Function: ^normalizeString node:path:66:25
+      1    0.0%    0.1%  Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      1    0.0%    0.1%  Function: ^isModified /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express-session/index.js:425:24
+      1    0.0%    0.1%  Function: ^insertGuarded node:internal/timers:325:23
+      1    0.0%    0.1%  Function: ^handleWriteReq node:internal/stream_base_commons:45:24
+      1    0.0%    0.1%  Function: ^handle /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/layer.js:86:49
+      1    0.0%    0.1%  Function: ^handle /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/index.js:136:31
+      1    0.0%    0.1%  Function: ^getDefaultTriggerAsyncId node:internal/async_hooks:433:34
+      1    0.0%    0.1%  Function: ^getColorDepth node:internal/tty:106:23
+      1    0.0%    0.1%  Function: ^get node:internal/streams/duplex:94:8
+      1    0.0%    0.1%  Function: ^get node:internal/bootstrap/pre_execution:319:8
+      1    0.0%    0.1%  Function: ^fromStringFast node:buffer:413:24
+      1    0.0%    0.1%  Function: ^formatValue node:internal/util/inspect:745:21
+      1    0.0%    0.1%  Function: ^formatArray node:internal/util/inspect:1634:21
+      1    0.0%    0.1%  Function: ^finishMaybe node:internal/streams/writable:731:21
+      1    0.0%    0.1%  Function: ^entitytag /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/etag/index.js:39:20
+      1    0.0%    0.1%  Function: ^end /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express-session/index.js:250:27
+      1    0.0%    0.1%  Function: ^emit node:events:474:44
+      1    0.0%    0.1%  Function: ^createError /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/http-errors/index.js:49:22
+      1    0.0%    0.1%  Function: ^compileFunction node:vm:308:25
+      1    0.0%    0.1%  Function: ^clearIncoming node:_http_server:749:23
+      1    0.0%    0.1%  Function: ^assertSize node:internal/crypto/random:75:20
+      1    0.0%    0.1%  Function: ^asString /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/pino/lib/tools.js:66:19
+      1    0.0%    0.1%  Function: ^asJson /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/pino/lib/tools.js:91:17
+      1    0.0%    0.1%  Function: ^alignPool node:buffer:159:19
+      1    0.0%    0.1%  Function: ^_writeRaw node:_http_outgoing:344:19
+      1    0.0%    0.1%  Function: ^_destroy node:internal/streams/destroy:70:18
+      1    0.0%    0.1%  Function: ^Writable.uncork node:internal/streams/writable:341:37
+      1    0.0%    0.1%  Function: ^OutgoingMessage node:_http_outgoing:97:25
+      1    0.0%    0.1%  Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    0.0%    0.1%  Function: ^IncomingMessage node:_http_incoming:51:25
+      1    0.0%    0.1%  Function: ^EventEmitter.init node:events:326:29
+      1    0.0%    0.1%  Function: ^<anonymous> node:internal/fs/utils:680:42
+      1    0.0%    0.1%  Function: ^<anonymous> node:internal/fs/utils:668:38
+      1    0.0%    0.1%  Function: ^<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/cmap/connection.js:60:44
+      1    0.0%    0.1%  Function: ^<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/request.js:467:36
+      1    0.0%    0.1%  Function: ^<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express-session/index.js:220:28
+
+ [C++]:
+   ticks  total  nonlib   name
+    321    4.6%   21.8%  __write@@GLIBC_2.2.5
+    268    3.8%   18.2%  epoll_pwait@@GLIBC_2.6
+    160    2.3%   10.9%  __read@@GLIBC_2.2.5
+    137    1.9%    9.3%  fwrite@@GLIBC_2.2.5
+     39    0.6%    2.6%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@@GLIBCXX_3.4.9
+     38    0.5%    2.6%  syscall@@GLIBC_2.2.5
+     30    0.4%    2.0%  __libc_open
+     26    0.4%    1.8%  __pthread_mutex_unlock_usercnt
+     26    0.4%    1.8%  __libc_malloc@@GLIBC_2.2.5
+     21    0.3%    1.4%  std::ostream::sentry::sentry(std::ostream&)@@GLIBCXX_3.4
+     21    0.3%    1.4%  _IO_file_xsputn@@GLIBC_2.2.5
+     17    0.2%    1.2%  __pthread_cond_signal
+     16    0.2%    1.1%  __libc_read
+     14    0.2%    1.0%  __pthread_cond_wait
+     12    0.2%    0.8%  std::ostream::sentry::~sentry()@@GLIBCXX_3.4
+     12    0.2%    0.8%  __lll_lock_wait
+     10    0.1%    0.7%  cfree@GLIBC_2.2.5
+      9    0.1%    0.6%  __mprotect@@GLIBC_PRIVATE
+      7    0.1%    0.5%  operator new(unsigned long)@@GLIBCXX_3.4
+      6    0.1%    0.4%  __close_nocancel@@GLIBC_PRIVATE
+      6    0.1%    0.4%  __GI___pthread_mutex_lock
+      5    0.1%    0.3%  __fxstat@@GLIBC_2.2.5
+      4    0.1%    0.3%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const@@GLIBCXX_3.4
+      4    0.1%    0.3%  operator delete(void*)@@GLIBCXX_3.4
+      4    0.1%    0.3%  __libc_write
+      4    0.1%    0.3%  __GI___pthread_rwlock_wrlock
+      3    0.0%    0.2%  std::ostream& std::ostream::_M_insert<long>(long)@@GLIBCXX_3.4.9
+      2    0.0%    0.1%  std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::do_put(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const@@GLIBCXX_3.4
+      2    0.0%    0.1%  std::__detail::_Prime_rehash_policy::_M_next_bkt(unsigned long) const@@GLIBCXX_3.4.18
+      2    0.0%    0.1%  std::__detail::_Prime_rehash_policy::_M_need_rehash(unsigned long, unsigned long, unsigned long) const@@GLIBCXX_3.4.18
+      2    0.0%    0.1%  std::__detail::_List_node_base::_M_hook(std::__detail::_List_node_base*)@@GLIBCXX_3.4.15
+      2    0.0%    0.1%  operator delete[](void*)@@GLIBCXX_3.4
+      2    0.0%    0.1%  fputc@@GLIBC_2.2.5
+      2    0.0%    0.1%  fgets@@GLIBC_2.2.5
+      2    0.0%    0.1%  __GI___pthread_mutex_unlock
+      2    0.0%    0.1%  _IO_setb@@GLIBC_2.2.5
+      2    0.0%    0.1%  _IO_link_in@@GLIBC_2.2.5
+      2    0.0%    0.1%  _IO_getline_info@@GLIBC_2.2.5
+      2    0.0%    0.1%  _IO_file_sync@@GLIBC_2.2.5
+      2    0.0%    0.1%  _IO_file_seekoff@@GLIBC_2.2.5
+      2    0.0%    0.1%  _IO_do_write@@GLIBC_2.2.5
+      1    0.0%    0.1%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<unsigned long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, unsigned long) const@@GLIBCXX_3.4
+      1    0.0%    0.1%  std::ostream::operator<<(int)@@GLIBCXX_3.4
+      1    0.0%    0.1%  std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::string const&)@@GLIBCXX_3.4
+      1    0.0%    0.1%  std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)@@GLIBCXX_3.4
+      1    0.0%    0.1%  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)@@GLIBCXX_3.4
+      1    0.0%    0.1%  pthread_sigmask
+      1    0.0%    0.1%  operator new[](unsigned long, std::nothrow_t const&)@@GLIBCXX_3.4
+      1    0.0%    0.1%  operator new[](unsigned long)@@GLIBCXX_3.4
+      1    0.0%    0.1%  getrusage@@GLIBC_2.2.5
+      1    0.0%    0.1%  epoll_ctl@@GLIBC_2.3.2
+      1    0.0%    0.1%  __uflow@@GLIBC_2.2.5
+      1    0.0%    0.1%  __sysconf@@GLIBC_2.2.5
+      1    0.0%    0.1%  __pthread_cond_broadcast
+      1    0.0%    0.1%  __munmap@@GLIBC_PRIVATE
+      1    0.0%    0.1%  __errno_location
+      1    0.0%    0.1%  __clock_gettime@@GLIBC_PRIVATE
+      1    0.0%    0.1%  __GI___pthread_rwlock_unlock
+      1    0.0%    0.1%  __GI___pthread_getspecific
+      1    0.0%    0.1%  _IO_sscanf@@GLIBC_2.2.5
+      1    0.0%    0.1%  _IO_file_write@@GLIBC_2.2.5
+
+ [Summary]:
+   ticks  total  nonlib   name
+    202    2.9%   13.7%  JavaScript
+   1268   18.0%   86.1%  C++
+    291    4.1%   19.8%  GC
+   5581   79.1%          Shared libraries
+      3    0.0%          Unaccounted
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+    303   33.9%    4.3%  __write@@GLIBC_2.2.5
+    160   17.9%    2.3%  __read@@GLIBC_2.2.5
+    135   15.1%    1.9%  fwrite@@GLIBC_2.2.5
+     38    4.3%    0.5%  syscall@@GLIBC_2.2.5
+     37    4.1%    0.5%  std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long)@@GLIBCXX_3.4.9
+     30    3.4%    0.4%  __libc_open
+     24    2.7%    0.3%  __libc_malloc@@GLIBC_2.2.5
+     20    2.2%    0.3%  std::ostream::sentry::sentry(std::ostream&)@@GLIBCXX_3.4
+     19    2.1%    0.3%  _IO_file_xsputn@@GLIBC_2.2.5
+     11    1.2%    0.2%  std::ostream::sentry::~sentry()@@GLIBCXX_3.4
+     11    1.2%    0.2%  __pthread_mutex_unlock_usercnt
+      9    1.0%    0.1%  cfree@GLIBC_2.2.5
+      9    1.0%    0.1%  __lll_lock_wait
+      6    0.7%    0.1%  operator new(unsigned long)@@GLIBCXX_3.4
+      6    0.7%    0.1%  __close_nocancel@@GLIBC_PRIVATE
+      5    0.6%    0.1%  __mprotect@@GLIBC_PRIVATE
+      5    0.6%    0.1%  __libc_read
+      5    0.6%    0.1%  __fxstat@@GLIBC_2.2.5
+      5    0.6%    0.1%  __GI___pthread_mutex_lock
+      4    0.4%    0.1%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const@@GLIBCXX_3.4
+      4    0.4%    0.1%  __GI___pthread_rwlock_wrlock
+      3    0.3%    0.0%  std::ostream& std::ostream::_M_insert<long>(long)@@GLIBCXX_3.4.9
+      2    0.2%    0.0%  std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::do_put(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, long) const@@GLIBCXX_3.4
+      2    0.2%    0.0%  std::__detail::_Prime_rehash_policy::_M_next_bkt(unsigned long) const@@GLIBCXX_3.4.18
+      2    0.2%    0.0%  std::__detail::_Prime_rehash_policy::_M_need_rehash(unsigned long, unsigned long, unsigned long) const@@GLIBCXX_3.4.18
+      2    0.2%    0.0%  std::__detail::_List_node_base::_M_hook(std::__detail::_List_node_base*)@@GLIBCXX_3.4.15
+      2    0.2%    0.0%  operator delete[](void*)@@GLIBCXX_3.4
+      2    0.2%    0.0%  operator delete(void*)@@GLIBCXX_3.4
+      2    0.2%    0.0%  fputc@@GLIBC_2.2.5
+      2    0.2%    0.0%  fgets@@GLIBC_2.2.5
+      2    0.2%    0.0%  __GI___pthread_mutex_unlock
+      2    0.2%    0.0%  _IO_setb@@GLIBC_2.2.5
+      2    0.2%    0.0%  _IO_link_in@@GLIBC_2.2.5
+      2    0.2%    0.0%  _IO_getline_info@@GLIBC_2.2.5
+      2    0.2%    0.0%  _IO_file_sync@@GLIBC_2.2.5
+      2    0.2%    0.0%  _IO_file_seekoff@@GLIBC_2.2.5
+      2    0.2%    0.0%  _IO_do_write@@GLIBC_2.2.5
+      1    0.1%    0.0%  std::ostreambuf_iterator<char, std::char_traits<char> > std::num_put<char, std::ostreambuf_iterator<char, std::char_traits<char> > >::_M_insert_int<unsigned long>(std::ostreambuf_iterator<char, std::char_traits<char> >, std::ios_base&, char, unsigned long) const@@GLIBCXX_3.4
+      1    0.1%    0.0%  std::ostream::operator<<(int)@@GLIBCXX_3.4
+      1    0.1%    0.0%  std::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)@@GLIBCXX_3.4
+      1    0.1%    0.0%  std::_Rb_tree_insert_and_rebalance(bool, std::_Rb_tree_node_base*, std::_Rb_tree_node_base*, std::_Rb_tree_node_base&)@@GLIBCXX_3.4
+      1    0.1%    0.0%  operator new[](unsigned long, std::nothrow_t const&)@@GLIBCXX_3.4
+      1    0.1%    0.0%  operator new[](unsigned long)@@GLIBCXX_3.4
+      1    0.1%    0.0%  __uflow@@GLIBC_2.2.5
+      1    0.1%    0.0%  __sysconf@@GLIBC_2.2.5
+      1    0.1%    0.0%  __pthread_cond_signal
+      1    0.1%    0.0%  __errno_location
+      1    0.1%    0.0%  __clock_gettime@@GLIBC_PRIVATE
+      1    0.1%    0.0%  __GI___pthread_rwlock_unlock
+      1    0.1%    0.0%  __GI___pthread_getspecific
+      1    0.1%    0.0%  _IO_sscanf@@GLIBC_2.2.5
+      1    0.1%    0.0%  _IO_file_write@@GLIBC_2.2.5
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   5413   76.7%  /usr/bin/node
+   3623   66.9%    /usr/bin/node
+   1102   30.4%      Function: ^compileFunction node:vm:308:25
+    573   52.0%        Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+    551   96.2%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+    525   95.3%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+     26    4.7%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1112:37
+     22    3.8%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1057:37
+     22  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1112:37
+    519   47.1%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1057:37
+    519  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+    357   68.8%            LazyCompile: *Module.load node:internal/modules/cjs/loader:969:33
+    162   31.2%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+    239    6.6%      Function: ^memoryUsage node:internal/process/per_thread:168:23
+    239  100.0%        Function: ^getSystemInformation /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/api/system/controller.js:9:30
+    239  100.0%          Function: ^handle /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/layer.js:86:49
+    236   98.7%            Function: ^next /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/route.js:116:16
+      3    1.3%            LazyCompile: ~next /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/route.js:116:16
+    133    3.7%      Function: ^cpus node:os:133:14
+    127   95.5%        Function: ^getSystemInformation /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/api/system/controller.js:9:30
+    127  100.0%          Function: ^handle /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/layer.js:86:49
+    127  100.0%            Function: ^next /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/route.js:116:16
+      6    4.5%        LazyCompile: ~getSystemInformation /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/api/system/controller.js:9:30
+      6  100.0%          Function: ^handle /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/layer.js:86:49
+      6  100.0%            LazyCompile: ~next /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/route.js:116:16
+    114    3.1%      Function: ^handleWriteReq node:internal/stream_base_commons:45:24
+    114  100.0%        Function: ^writeGeneric node:internal/stream_base_commons:147:22
+    101   88.6%          Function: ^Socket._writeGeneric node:net:769:42
+    101  100.0%            Function: ^Socket._write node:net:806:35
+      8    7.0%          LazyCompile: *writeOrBuffer node:internal/streams/writable:365:23
+      8  100.0%            Function: ^_write node:internal/streams/writable:283:16
+      5    4.4%          LazyCompile: *_write node:internal/streams/writable:283:16
+      5  100.0%            Function: ^Writable.write node:internal/streams/writable:333:36
+    101    2.8%      /usr/bin/node
+      7    6.9%        Function: ^readPackage node:internal/modules/cjs/loader:290:21
+      7  100.0%          Function: ^readPackageScope node:internal/modules/cjs/loader:321:26
+      5   71.4%            Function: ^trySelf node:internal/modules/cjs/loader:441:17
+      2   28.6%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      5    5.0%        LazyCompile: *Module._findPath node:internal/modules/cjs/loader:494:28
+      5  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      5  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      5    5.0%        Function: ^removeColors node:internal/util:76:22
+      5  100.0%          Function: ^isBelowBreakLength node:internal/util/inspect:1878:28
+      5  100.0%            Function: ^reduceToSingleString node:internal/util/inspect:1902:30
+      5    5.0%        Function: ^compileFunction node:vm:308:25
+      3   60.0%          Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+      3  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      2   40.0%          LazyCompile: *Module._compile node:internal/modules/cjs/loader:1057:37
+      2  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      5    5.0%        Function: ^FastBuffer node:internal/buffer:958:14
+      4   80.0%          Function: ^createUnsafeBuffer node:internal/buffer:1059:28
+      2   50.0%            Function: ^createPool node:buffer:151:20
+      2   50.0%            Function: ^allocate node:buffer:398:18
+      1   20.0%          Function: ^alloc node:buffer:360:30
+      1  100.0%            Function: ^serialize /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/bson.js:124:19
+      4    4.0%        LazyCompile: *formatProperty node:internal/util/inspect:1810:24
+      2   50.0%          LazyCompile: *formatRaw node:internal/util/inspect:820:19
+      2  100.0%            LazyCompile: *formatValue node:internal/util/inspect:745:21
+      2   50.0%          Function: ^formatArray node:internal/util/inspect:1634:21
+      2  100.0%            Function: ^formatRaw node:internal/util/inspect:820:19
+      4    4.0%        Function: ^pipe /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/send/index.js:506:43
+      4  100.0%          Function: ^serveStatic /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/serve-static/index.js:72:31
+      4  100.0%            Function: ^handle /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/layer.js:86:49
+      4    4.0%        Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      4  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      4  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      3    3.0%        LazyCompile: ~isIPv6 node:internal/net:35:16
+      3  100.0%          LazyCompile: ~isIP node:internal/net:39:14
+      2   66.7%            LazyCompile: ~parseSslOptions /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/cmap/connect.js:229:25
+      1   33.3%            LazyCompile: ~lookupAndConnect node:net:995:26
+      3    3.0%        LazyCompile: *reduceToSingleString node:internal/util/inspect:1902:30
+      3  100.0%          LazyCompile: *formatRaw node:internal/util/inspect:820:19
+      3  100.0%            LazyCompile: *formatValue node:internal/util/inspect:745:21
+      3    3.0%        Function: ^header /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/response.js:777:29
+      2   66.7%          Function: ^send /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/response.js:111:25
+      2  100.0%            Function: ^json /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/response.js:250:25
+      1   33.3%          Function: ^json /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/response.js:250:25
+      1  100.0%            Function: ^getSystemInformation /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/api/system/controller.js:9:30
+      3    3.0%        Function: ^format /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/content-type/index.js:65:17
+      3  100.0%          Function: ^setCharset /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/utils.js:248:41
+      3  100.0%            Function: ^send /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/response.js:111:25
+      3    3.0%        Function: ^expressInit /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/middleware/init.js:29:30
+      2   66.7%          Function: ^handle /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/layer.js:86:49
+      2  100.0%            Function: ^trim_prefix /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/index.js:293:23
+      1   33.3%          LazyCompile: *trim_prefix /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/index.js:293:23
+      1  100.0%            LazyCompile: *next /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/index.js:177:16
+      3    3.0%        Function: ^checkInvalidHeaderChar node:_http_common:232:32
+      3  100.0%          Function: ^<anonymous> node:_http_outgoing:564:45
+      3  100.0%            Function: ^setHeader node:_http_outgoing:574:57
+      2    2.0%        LazyCompile: ~resolvePackageTargetString node:internal/modules/esm/resolve:488:36
+      2  100.0%          LazyCompile: ~resolvePackageTarget node:internal/modules/esm/resolve:553:30
+      1   50.0%            LazyCompile: ~resolvePackageTarget node:internal/modules/esm/resolve:553:30
+      1   50.0%            LazyCompile: ~packageExportsResolve node:internal/modules/esm/resolve:656:31
+      2    2.0%        Function: ^stat node:internal/modules/cjs/loader:151:14
+      1   50.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%            LazyCompile: ~Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1   50.0%          Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      2    2.0%        Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      2  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      2  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+     86    2.4%      Function: ^writevGeneric node:internal/stream_base_commons:122:23
+     86  100.0%        Function: ^Socket._writeGeneric node:net:769:42
+     86  100.0%          Function: ^Socket._writev node:net:801:36
+     86  100.0%            Function: ^doWrite node:internal/streams/writable:398:17
+     71    2.0%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+     57   80.3%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:332:29
+     10   17.5%          Function: ~<anonymous> node:crypto:1:1
+     10  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      5    8.8%          Function: ~<anonymous> node:http:1:1
+      5  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      4    7.0%          Function: ~<anonymous> node:tls:1:1
+      4  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3    5.3%          Function: ~<anonymous> node:internal/child_process:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3    5.3%          Function: ~<anonymous> node:child_process:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3    5.3%          Function: ~<anonymous> node:_http_client:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      3    5.3%          Function: ~<anonymous> node:_http_agent:1:1
+      3  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    3.5%          LazyCompile: ~lazyRequire node:internal/crypto/util:67:21
+      2  100.0%            LazyCompile: ~get node:crypto:287:8
+      2    3.5%          Function: ~<anonymous> node:internal/crypto/hkdf:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    3.5%          Function: ~<anonymous> node:internal/cluster/primary:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    3.5%          Function: ~<anonymous> node:assert:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      2    3.5%          Function: ~<anonymous> node:_tls_wrap:1:1
+      2  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.8%          LazyCompile: ~lazyLoadStreams node:fs:2845:25
+      1  100.0%            LazyCompile: ~get ReadStream node:fs:2988:17
+      1    1.8%          LazyCompile: ~get node:dns:334:8
+      1  100.0%            /usr/bin/node
+      1    1.8%          LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:41:35
+      1  100.0%            LazyCompile: ~getStdout node:internal/bootstrap/switches/is_main_thread:125:19
+      1    1.8%          Function: ~<anonymous> node:worker_threads:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.8%          Function: ~<anonymous> node:tty:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.8%          Function: ~<anonymous> node:net:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.8%          Function: ~<anonymous> node:internal/worker:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.8%          Function: ~<anonymous> node:internal/tls/secure-context:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.8%          Function: ~<anonymous> node:internal/crypto/util:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.8%          Function: ~<anonymous> node:https:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.8%          Function: ~<anonymous> node:dns:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.8%          Function: ~<anonymous> node:dgram:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.8%          Function: ~<anonymous> node:cluster:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.8%          Function: ~<anonymous> node:_tls_common:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.8%          Function: ~<anonymous> node:_http_server:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1    1.8%          Function: ~<anonymous> node:_http_common:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+     11   15.5%        Function: ^compileForPublicLoader node:internal/bootstrap/loaders:246:25
+     11  100.0%          Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+     11  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      3    4.2%        LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      2   66.7%          Function: ^loadNativeModule node:internal/modules/cjs/helpers:44:26
+      2  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+      1   33.3%          LazyCompile: ~loadNativeModule node:internal/modules/cjs/helpers:44:26
+      1  100.0%            LazyCompile: ~Module._load node:internal/modules/cjs/loader:757:24
+     63    1.7%      Function: ^deserializeObject /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/parser/deserializer.js:65:27
+     56   88.9%        Function: ^deserialize /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/parser/deserializer.js:36:21
+     56  100.0%          Function: ^deserialize /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/bson.js:175:21
+     56  100.0%            Function: ^parse /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/cmap/commands.js:426:10
+      5    7.9%        Function: ^deserializeObject /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/parser/deserializer.js:65:27
+      3   60.0%          Function: ^deserialize /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/parser/deserializer.js:36:21
+      3  100.0%            Function: ^deserialize /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/bson.js:175:21
+      1   20.0%          LazyCompile: ~deserialize /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/parser/deserializer.js:36:21
+      1  100.0%            LazyCompile: ~deserialize /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/bson.js:175:21
+      1   20.0%          Function: ^deserializeObject /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%            Function: ^deserialize /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/parser/deserializer.js:36:21
+      2    3.2%        LazyCompile: ~deserialize /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/parser/deserializer.js:36:21
+      2  100.0%          Function: ^deserialize /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/bson.js:175:21
+      2  100.0%            LazyCompile: ~parse /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/cmap/commands.js:426:10
+     39    1.1%      Function: ^stat node:fs:1454:14
+     39  100.0%        Function: ^sendFile /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/send/index.js:712:51
+     39  100.0%          Function: ^pipe /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/send/index.js:506:43
+     39  100.0%            Function: ^serveStatic /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/serve-static/index.js:72:31
+    104    1.9%    LazyCompile: *compileFunction node:vm:308:25
+    104  100.0%      Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+    104  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+    104  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+     57   54.8%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+     47   45.2%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+
+    321    4.6%  __write@@GLIBC_2.2.5
+    280   87.2%    /usr/bin/node
+      8    2.9%      /usr/bin/node
+      1   12.5%        LazyCompile: ~parseOptions /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/connection_string.js:204:22
+      1  100.0%          LazyCompile: ~MongoClient /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/mongo_client.js:62:16
+      1  100.0%            LazyCompile: ~connect /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/mongo_client.js:214:19
+      1   12.5%        LazyCompile: ~module.exports /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/minimist/index.js:1:27
+      1  100.0%          Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/server.js:1:1
+      1  100.0%            LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1057:37
+      1   12.5%        LazyCompile: ~SemVer /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/semver/classes/semver.js:8:15
+      1  100.0%          LazyCompile: ~parse /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/semver/functions/parse.js:6:15
+      1  100.0%            LazyCompile: ~module.exports.evaluate /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:277:35
+      1   12.5%        LazyCompile: ~Duplex node:internal/streams/duplex:52:16
+      1  100.0%          LazyCompile: ~Socket node:net:283:16
+      1  100.0%            LazyCompile: ~WriteStream node:tty:85:21
+      1   12.5%        LazyCompile: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/socket.io/dist/index.js:262:27
+      1  100.0%          Function: ^emit node:events:474:44
+      1  100.0%            LazyCompile: ~parserOnIncoming node:_http_server:852:26
+      1   12.5%        LazyCompile: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/sdam/monitor.js:204:52
+      1  100.0%          LazyCompile: ~callback /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/cmap/connect.js:63:31
+      1  100.0%            LazyCompile: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/cmap/connect.js:88:85
+      1   12.5%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express-session/node_modules/debug/src/node.js:1:1
+      1  100.0%          LazyCompile: *Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1   12.5%        Function: ^deserializeObject /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%          LazyCompile: ~deserialize /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/parser/deserializer.js:36:21
+      1  100.0%            LazyCompile: ~deserialize /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/bson.js:175:21
+      5    1.8%      LazyCompile: ~onStreamRead node:internal/stream_base_commons:167:22
+      3    1.1%      LazyCompile: ~serializeString /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/parser/serializer.js:19:25
+      3  100.0%        LazyCompile: ~serializeInto /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/parser/serializer.js:553:23
+      3  100.0%          LazyCompile: ~serialize /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/bson.js:124:19
+      3  100.0%            LazyCompile: ~serializeBson /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/cmap/commands.js:379:18
+      3    1.1%      LazyCompile: ~serializeInto /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/parser/serializer.js:553:23
+      2   66.7%        LazyCompile: ~serialize /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/bson.js:124:19
+      2  100.0%          LazyCompile: ~toBin /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/cmap/commands.js:82:10
+      2  100.0%            LazyCompile: ~writeCommand /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/cmap/message_stream.js:40:17
+      1   33.3%        LazyCompile: ~serializeObject /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/parser/serializer.js:260:25
+      1  100.0%          LazyCompile: ~serializeInto /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/parser/serializer.js:553:23
+      1  100.0%            LazyCompile: ~serialize /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/bson.js:124:19
+      3    1.1%      LazyCompile: ~listOnTimeout node:internal/timers:507:25
+      3  100.0%        LazyCompile: ~processTimers node:internal/timers:487:25
+      3    1.1%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/server.js:1:1
+      3  100.0%        LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1057:37
+      3  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      3  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:969:33
+     23    7.2%    LazyCompile: *compileFunction node:vm:308:25
+     23  100.0%      Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+     23  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+     23  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+     14   60.9%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      9   39.1%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+
+    268    3.8%  epoll_pwait@@GLIBC_2.6
+
+    160    2.3%  __read@@GLIBC_2.2.5
+    160  100.0%    LazyCompile: *cpus node:os:133:14
+    160  100.0%      Function: ^getSystemInformation /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/api/system/controller.js:9:30
+    160  100.0%        Function: ^handle /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/layer.js:86:49
+    160  100.0%          Function: ^next /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/route.js:116:16
+    160  100.0%            Function: ^dispatch /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/route.js:98:45
+
+    150    2.1%  /usr/lib/x86_64-linux-gnu/libc-2.31.so
+     90   60.0%    /usr/bin/node
+      9   10.0%      /usr/bin/node
+      2   22.2%        Function: ^FastBuffer node:internal/buffer:958:14
+      2  100.0%          Function: ^createUnsafeBuffer node:internal/buffer:1059:28
+      1   50.0%            Function: ^createPool node:buffer:151:20
+      1   50.0%            Function: ^allocate node:buffer:398:18
+      1   11.1%        LazyCompile: ~isIPv6 node:internal/net:35:16
+      1  100.0%          LazyCompile: ~isIP node:internal/net:39:14
+      1  100.0%            LazyCompile: ~lookupAndConnect node:net:995:26
+      1   11.1%        Function: ^strEscape node:internal/util/inspect:475:19
+      1  100.0%          Function: ^formatPrimitive node:internal/util/inspect:1519:25
+      1  100.0%            Function: ^formatValue node:internal/util/inspect:745:21
+      1   11.1%        Function: ^readPackage node:internal/modules/cjs/loader:290:21
+      1  100.0%          Function: ^tryPackage node:internal/modules/cjs/loader:338:20
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      1   11.1%        Function: ^hasServer /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/sdam/topology_description.js:238:14
+      1  100.0%          Function: ^serverUpdateHandler /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/sdam/topology.js:321:24
+      1  100.0%            Function: ^<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/sdam/topology.js:481:53
+      1   11.1%        Function: ^clearBuffer node:internal/streams/writable:529:21
+      1  100.0%          Function: ^Writable.uncork node:internal/streams/writable:341:37
+      1  100.0%            Function: ^end node:_http_outgoing:833:45
+      1   11.1%        Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1   11.1%        /usr/bin/node
+      1  100.0%          Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@google-cloud/firestore/build/src/index.js:1:1
+      1  100.0%            LazyCompile: *Module._compile node:internal/modules/cjs/loader:1057:37
+      7    7.8%      LazyCompile: *realpathSync node:fs:2412:22
+      4   57.1%        Function: ^toRealPath node:internal/modules/cjs/loader:393:20
+      4  100.0%          Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      4  100.0%            Function: ^tryExtensions node:internal/modules/cjs/loader:400:23
+      3   42.9%        LazyCompile: *Module._findPath node:internal/modules/cjs/loader:494:28
+      2   66.7%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      2  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1   33.3%          LazyCompile: *Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      5    5.6%      LazyCompile: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/server.js:80:27
+      5  100.0%        LazyCompile: ~onceWrapper node:events:640:21
+      5  100.0%          LazyCompile: ~emit node:events:474:44
+      5  100.0%            LazyCompile: ~emitListeningNT node:net:1361:25
+      3    3.3%      LazyCompile: *Module._findPath node:internal/modules/cjs/loader:494:28
+      3  100.0%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      3  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      3  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      2    2.2%      LazyCompile: ~W /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/faker.js:1:1328
+      2  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/index.js:1:1
+      2  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      2  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      2    2.2%      LazyCompile: *readPackageScope node:internal/modules/cjs/loader:321:26
+      1   50.0%        Function: ^trySelf node:internal/modules/cjs/loader:441:17
+      1  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1   50.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      2    2.2%      Function: ^Module._findPath node:internal/modules/cjs/loader:494:28
+      2  100.0%        Function: ^Module._resolveFilename node:internal/modules/cjs/loader:848:35
+      2  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      2  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1    1.1%      LazyCompile: ~y /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/en/music/song_name.js:1:375
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/en/music/song_name.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.1%      LazyCompile: ~write /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/cmap/connection.js:384:15
+      1  100.0%        LazyCompile: ~command /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/cmap/connection.js:251:12
+      1  100.0%          LazyCompile: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/cmap/connect.js:78:43
+      1  100.0%            LazyCompile: ~prepareHandshakeDocument /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/cmap/connect.js:146:34
+      1    1.1%      LazyCompile: ~toRealPath node:internal/modules/cjs/loader:393:20
+      1  100.0%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%          LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      1  100.0%            LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:70:31
+      1    1.1%      LazyCompile: ~supportsOpMsg /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/cmap/connection.js:366:23
+      1  100.0%        LazyCompile: ~command /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/cmap/connection.js:251:12
+      1  100.0%          LazyCompile: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/cmap/connect.js:78:43
+      1  100.0%            LazyCompile: ~prepareHandshakeDocument /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/cmap/connect.js:146:34
+      1    1.1%      LazyCompile: ~setStreamTimeout node:internal/stream_base_commons:237:26
+      1  100.0%        LazyCompile: ~makeConnection /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/cmap/connect.js:248:24
+      1  100.0%          LazyCompile: ~connect /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/cmap/connect.js:30:17
+      1  100.0%            LazyCompile: ~checkServer /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/sdam/monitor.js:143:21
+      1    1.1%      LazyCompile: ~s /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/fr_CH/name/last_name.js:1:375
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/fr_CH/name/last_name.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.1%      LazyCompile: ~processPromiseRejections node:internal/process/promises:211:34
+      1  100.0%        Function: ^processTicksAndRejections node:internal/process/task_queues:68:35
+      1    1.1%      LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1  100.0%        Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    1.1%      LazyCompile: ~p /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/ru/hacker/index.js:1:246
+      1  100.0%        LazyCompile: ~t /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/ru/hacker/index.js:1:419
+      1  100.0%          Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/ru/hacker/index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1    1.1%      LazyCompile: ~onEofChunk node:internal/streams/readable:533:20
+      1  100.0%        Function: ^readableAddChunk node:internal/streams/readable:236:26
+      1  100.0%          Function: ^Readable.push node:internal/streams/readable:227:35
+      1  100.0%            LazyCompile: ~parserOnMessageComplete node:_http_common:147:33
+      1    1.1%      LazyCompile: ~onConnectSecure node:_tls_wrap:1516:25
+      1  100.0%        Function: ^emit node:events:474:44
+      1  100.0%          LazyCompile: ~TLSSocket._finishInit node:_tls_wrap:918:43
+      1  100.0%            LazyCompile: ~ssl.onhandshakedone node:_tls_wrap:723:27
+      1    1.1%      LazyCompile: ~n /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/en/company/index.js:1:246
+      1  100.0%        LazyCompile: ~i /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/en/company/index.js:1:419
+      1  100.0%          Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/en/company/index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1    1.1%      LazyCompile: ~j /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/pt_BR/name/index.js:1:520
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/pt_BR/name/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.1%      LazyCompile: ~header /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/response.js:777:29
+      1  100.0%        LazyCompile: ~send /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/response.js:111:25
+      1  100.0%          LazyCompile: ~json /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/response.js:250:25
+      1  100.0%            LazyCompile: ~getSystemInformation /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/api/system/controller.js:9:30
+      1    1.1%      LazyCompile: ~get pathname /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/whatwg-url/lib/URL-impl.js:147:15
+      1  100.0%        LazyCompile: ~get pathname /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/whatwg-url/lib/URL.js:321:17
+      1  100.0%          LazyCompile: ~ConnectionString /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb-connection-string-url/lib/index.js:82:16
+      1  100.0%            LazyCompile: ~parseOptions /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/connection_string.js:204:22
+      1    1.1%      LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/nl/commerce/index.js:1:355
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/nl/commerce/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.1%      LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/nl/address/secondary_address.js:1:311
+      1  100.0%        LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/nl/address/index.js:1:355
+      1  100.0%          Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/nl/address/index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1    1.1%      LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/mk/name/prefix.js:1:311
+      1  100.0%        /usr/bin/node
+      1  100.0%          LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/mk/name/index.js:1:355
+      1  100.0%            Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/mk/name/index.js:1:1
+      1    1.1%      LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/hu/name/female_first_name.js:1:311
+      1  100.0%        LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/hu/name/first_name.js:1:355
+      1  100.0%          Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/hu/name/first_name.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1    1.1%      LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/he/address/index.js:1:355
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/he/address/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.1%      LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/fr/date/month.js:1:311
+      1  100.0%        LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/fr/date/index.js:1:355
+      1  100.0%          Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/fr/date/index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1    1.1%      LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/es/company/index.js:1:355
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/es/company/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.1%      LazyCompile: ~d /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/id_ID/name/female_first_name.js:1:375
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/id_ID/name/female_first_name.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.1%      LazyCompile: ~d /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/fr/lorem/words.js:1:375
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/fr/lorem/words.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.1%      LazyCompile: ~b /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/hy/address/city_suffix.js:1:375
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/hy/address/city_suffix.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.1%      LazyCompile: ~b /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/fa/cell_phone/formats.js:1:375
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/fa/cell_phone/formats.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.1%      LazyCompile: ~b /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/es_MX/address/postcode.js:1:375
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/es_MX/address/postcode.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.1%      LazyCompile: ~allocate node:buffer:398:18
+      1  100.0%        Function: ^allocUnsafe node:buffer:373:42
+      1  100.0%          Function: ^tryCreateBuffer node:fs:414:25
+      1  100.0%            Function: ^readFileSync node:fs:450:22
+      1    1.1%      LazyCompile: ~_flush node:_http_outgoing:934:51
+      1  100.0%        Function: ^assignSocket node:_http_server:239:62
+      1  100.0%          LazyCompile: ~parserOnIncoming node:_http_server:852:26
+      1  100.0%            Function: ^parserOnHeadersComplete node:_http_common:77:33
+      1    1.1%      LazyCompile: ~ServiceAccount /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/firebase-admin/lib/app/credential-internal.js:117:16
+      1  100.0%        LazyCompile: ~ServiceAccountCredential /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/firebase-admin/lib/app/credential-internal.js:64:16
+      1  100.0%          LazyCompile: ~cert /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/firebase-admin/lib/app/credential-factory.js:100:14
+      1  100.0%            Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/store/firebase/connection.js:1:1
+      1    1.1%      LazyCompile: ~Pager.set /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/memory-pager/index.js:81:32
+      1  100.0%        LazyCompile: ~Bitfield /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/sparse-bitfield/index.js:5:19
+      1  100.0%          LazyCompile: ~Bitfield /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/sparse-bitfield/index.js:5:19
+      1  100.0%            LazyCompile: ~read /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/saslprep/lib/memory-code-points.js:15:14
+      1    1.1%      LazyCompile: ~Module._extensions..json node:internal/modules/cjs/loader:1162:39
+      1  100.0%        Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1  100.0%          Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1    1.1%      LazyCompile: ~D /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/he/color/index.js:1:520
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/he/color/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.1%      LazyCompile: ~<anonymous> node:internal/url:682:12
+      1  100.0%        LazyCompile: ~toString node:internal/url:730:11
+      1  100.0%          LazyCompile: ~URL node:internal/url:620:14
+      1  100.0%            LazyCompile: ~URL node:internal/url:620:14
+      1    1.1%      LazyCompile: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/sdam/monitor.js:237:30
+      1  100.0%        LazyCompile: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/sdam/monitor.js:204:52
+      1  100.0%          LazyCompile: ~callback /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/cmap/connect.js:63:31
+      1  100.0%            LazyCompile: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/cmap/connect.js:88:85
+      1    1.1%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/send/node_modules/mime/mime.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.1%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/ur/address/default_country.js:1:1
+      1  100.0%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.1%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/ru/internet/free_email.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.1%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/pt_BR/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.1%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/ne/internet/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.1%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/mk/address/secondary_address.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.1%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/id_ID/date/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1    1.1%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/he/lorem/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.1%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/fr_CH/vehicle/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.1%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/fr_CH/finance/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.1%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/fa/finance/credit_card/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.1%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/en_CA/phone_number/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.1%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/en/company/bs_verb.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.1%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/de/internet/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.1%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/cz/name/name.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.1%      Function: ^realpathSync node:fs:2412:22
+      1  100.0%        Function: ^toRealPath node:internal/modules/cjs/loader:393:20
+      1  100.0%          Function: ^tryFile node:internal/modules/cjs/loader:384:17
+      1  100.0%            Function: ^tryExtensions node:internal/modules/cjs/loader:400:23
+      1    1.1%      Function: ^randomBytes node:internal/crypto/random:91:21
+      1  100.0%        Function: ^randomBytesSync /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/random-bytes/index.js:72:25
+      1  100.0%          Function: ^uidSync /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/uid-safe/index.js:75:18
+      1  100.0%            Function: ^generateSessionId /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express-session/index.js:518:27
+      1    1.1%      Function: ^parserOnHeadersComplete node:_http_common:77:33
+      1    1.1%      Function: ^onStreamRead node:internal/stream_base_commons:167:22
+      1    1.1%      Function: ^endReadable node:internal/streams/readable:1328:21
+      1  100.0%        Function: ^Readable.read node:internal/streams/readable:394:35
+      1  100.0%          Function: ^resume_ node:internal/streams/readable:984:17
+      1  100.0%            Function: ^processTicksAndRejections node:internal/process/task_queues:68:35
+      1    1.1%      Function: ^deserializeObject /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%        Function: ^deserialize /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/parser/deserializer.js:36:21
+      1  100.0%          Function: ^deserialize /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/bson.js:175:21
+      1  100.0%            Function: ^parse /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/cmap/commands.js:426:10
+      1    1.1%      Function: ^_handles_method /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/route.js:58:59
+      1  100.0%        LazyCompile: *next /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/index.js:177:16
+      1  100.0%          LazyCompile: *handle /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/index.js:136:31
+      1  100.0%            Function: ^router /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/index.js:46:18
+      1    1.1%      Function: ^_copyActual node:buffer:243:21
+      1  100.0%        Function: ^concat node:buffer:536:32
+      1  100.0%          LazyCompile: ~read /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/utils.js:876:9
+      1  100.0%            LazyCompile: ~processIncomingData /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/cmap/message_stream.js:84:29
+      1    1.1%      Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1  100.0%        Function: ^Module.require node:internal/modules/cjs/loader:997:36
+      1  100.0%          Function: ^require node:internal/modules/cjs/helpers:101:31
+      1  100.0%            Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/tr/address/index.js:1:1
+      1    1.1%      Function: ^Hash node:internal/crypto/hash:58:14
+      1  100.0%        Function: ^createHash node:crypto:129:20
+      1  100.0%          Function: ^hash /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express-session/index.js:596:14
+      1  100.0%            Function: ^generate /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express-session/index.js:363:22
+     23   15.3%    LazyCompile: *cpus node:os:133:14
+     23  100.0%      Function: ^getSystemInformation /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/api/system/controller.js:9:30
+     23  100.0%        Function: ^handle /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/layer.js:86:49
+     23  100.0%          Function: ^next /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/route.js:116:16
+     23  100.0%            Function: ^dispatch /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/route.js:98:45
+     18   12.0%    LazyCompile: *compileFunction node:vm:308:25
+     18  100.0%      Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+     18  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+     18  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+     13   72.2%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      5   27.8%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      2    1.3%    LazyCompile: *readSync node:fs:684:18
+      2  100.0%      LazyCompile: *readFileSync node:fs:450:22
+      2  100.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1   50.0%          LazyCompile: *Module.load node:internal/modules/cjs/loader:969:33
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+      1   50.0%          Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:757:24
+
+    137    1.9%  fwrite@@GLIBC_2.2.5
+     97   70.8%    /usr/bin/node
+      4    4.1%      /usr/bin/node
+      1   25.0%        LazyCompile: ~module.exports.validate_package_json /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@mapbox/node-pre-gyp/lib/util/napi.js:46:48
+      1  100.0%          LazyCompile: ~validate_config /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@mapbox/node-pre-gyp/lib/util/versioning.js:195:25
+      1  100.0%            LazyCompile: ~exports.find /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@mapbox/node-pre-gyp/lib/pre-binding.js:17:24
+      1   25.0%        LazyCompile: ~hash /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express-session/index.js:596:14
+      1  100.0%          LazyCompile: ~generate /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express-session/index.js:363:22
+      1  100.0%            LazyCompile: ~session /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express-session/index.js:179:26
+      1   25.0%        LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/lv/address/index.js:1:355
+      1  100.0%          Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/lv/address/index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1   25.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/store/firebase/connection.js:1:1
+      1  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      3    3.1%      LazyCompile: ~value node:internal/console/constructor:321:20
+      3  100.0%        LazyCompile: ~log node:internal/console/constructor:359:6
+      3  100.0%          /usr/bin/node
+      3  100.0%            Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/store/firebase/connection.js:1:1
+      1    1.0%      LazyCompile: ~y /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/vi/name/index.js:1:520
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/vi/name/index.js:1:1
+      1  100.0%          LazyCompile: *Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~x /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/zu_ZA/address/index.js:1:520
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/zu_ZA/address/index.js:1:1
+      1  100.0%          LazyCompile: *Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~u /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/sv/address/default_country.js:1:375
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/sv/address/default_country.js:1:1
+      1  100.0%          LazyCompile: *Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~u /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/nl_BE/address/building_number.js:1:375
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/nl_BE/address/building_number.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~toRealPath node:internal/modules/cjs/loader:393:20
+      1  100.0%        LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%          LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      1  100.0%            LazyCompile: ~executeUserEntryPoint node:internal/modules/run_main:70:31
+      1    1.0%      LazyCompile: ~setupWarningHandler node:internal/bootstrap/pre_execution:134:29
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    1.0%      LazyCompile: ~setStreamTimeout node:internal/stream_base_commons:237:26
+      1  100.0%        LazyCompile: ~makeConnection /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/cmap/connect.js:248:24
+      1  100.0%          LazyCompile: ~connect /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/cmap/connect.js:30:17
+      1  100.0%            LazyCompile: ~checkServer /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/sdam/monitor.js:143:21
+      1    1.0%      LazyCompile: ~realpathSync node:fs:2412:22
+      1  100.0%        LazyCompile: ~toRealPath node:internal/modules/cjs/loader:393:20
+      1  100.0%          LazyCompile: ~Module._findPath node:internal/modules/cjs/loader:494:28
+      1  100.0%            LazyCompile: ~resolveMainPath node:internal/modules/run_main:15:25
+      1    1.0%      LazyCompile: ~r /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/fr/animal/index.js:1:419
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/fr/animal/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~processTicksAndRejections node:internal/process/task_queues:68:35
+      1    1.0%      LazyCompile: ~patchProcessObject node:internal/bootstrap/pre_execution:81:28
+      1  100.0%        LazyCompile: ~prepareMainThreadExecution node:internal/bootstrap/pre_execution:22:36
+      1  100.0%          Function: ~<anonymous> node:internal/main/run_main_module:1:1
+      1    1.0%      LazyCompile: ~n /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/fr_BE/address/street.js:1:375
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/fr_BE/address/street.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~n /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/de/index.js:1:246
+      1  100.0%        LazyCompile: ~m /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/de/index.js:1:419
+      1  100.0%          Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/de/index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1    1.0%      LazyCompile: ~module.exports /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/gauge/plumbing.js:6:42
+      1  100.0%        LazyCompile: ~Gauge /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/gauge/index.js:19:16
+      1  100.0%          Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/npmlog/log.js:1:1
+      1  100.0%            LazyCompile: *Module._compile node:internal/modules/cjs/loader:1057:37
+      1    1.0%      LazyCompile: ~m /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/mk/address/street_address.js:1:375
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/mk/address/street_address.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~m /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/es/address/street_address.js:1:375
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/es/address/street_address.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~lowerCaseMethod /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/methods/index.js:30:67
+      1  100.0%        /usr/bin/node
+      1  100.0%          LazyCompile: ~getCurrentNodeMethods /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/methods/index.js:29:31
+      1  100.0%            Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/methods/index.js:1:1
+      1    1.0%      LazyCompile: ~insert node:internal/timers:350:16
+      1  100.0%        LazyCompile: ~setUnrefTimeout node:internal/timers:372:25
+      1  100.0%          LazyCompile: ~setStreamTimeout node:internal/stream_base_commons:237:26
+      1  100.0%            LazyCompile: ~makeConnection /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/cmap/connect.js:248:24
+      1    1.0%      LazyCompile: ~howMuchToRead node:internal/streams/readable:377:23
+      1  100.0%        Function: ^Readable.read node:internal/streams/readable:394:35
+      1  100.0%          Function: ^Socket.read node:net:639:33
+      1  100.0%            Function: ^flow node:internal/streams/readable:1008:14
+      1    1.0%      LazyCompile: ~handle /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/layer.js:86:49
+      1  100.0%        LazyCompile: ~trim_prefix /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/index.js:293:23
+      1  100.0%          LazyCompile: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/index.js:280:64
+      1  100.0%            LazyCompile: ~process_params /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/express/lib/router/index.js:338:47
+      1    1.0%      LazyCompile: ~getCheckedFunction node:os:63:28
+      1  100.0%        Function: ~<anonymous> node:os:1:1
+      1  100.0%          Function: ^compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%            LazyCompile: ~compileForPublicLoader node:internal/bootstrap/loaders:246:25
+      1    1.0%      LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/zh_CN/address/index.js:1:355
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/zh_CN/address/index.js:1:1
+      1  100.0%          LazyCompile: *Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/ur/animal/index.js:1:355
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/ur/animal/index.js:1:1
+      1  100.0%          LazyCompile: *Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/uk/address/index.js:1:355
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/uk/address/index.js:1:1
+      1  100.0%          LazyCompile: *Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/sk/lorem/words.js:1:311
+      1  100.0%        LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/sk/lorem/index.js:1:355
+      1  100.0%          Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/sk/lorem/index.js:1:1
+      1  100.0%            LazyCompile: *Module._compile node:internal/modules/cjs/loader:1057:37
+      1    1.0%      LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/ru/commerce/product_name.js:1:311
+      1  100.0%        LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/ru/commerce/index.js:1:355
+      1  100.0%          Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/ru/commerce/index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1    1.0%      LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/ro/internet/index.js:1:355
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/ro/internet/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/lv/company/suffix.js:1:311
+      1  100.0%        LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/lv/company/index.js:1:355
+      1  100.0%          Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/lv/company/index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1    1.0%      LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/ja/address/index.js:1:355
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/ja/address/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/hy/address/city_suffix.js:1:311
+      1  100.0%        LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/hy/address/index.js:1:355
+      1  100.0%          Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/hy/address/index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1    1.0%      LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/hu/name/index.js:1:355
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/hu/name/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/hr/name/index.js:1:355
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/hr/name/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/ge/address/index.js:1:355
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/ge/address/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/fr/name/index.js:1:355
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/fr/name/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/es_MX/team/creature.js:1:311
+      1  100.0%        LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/es_MX/team/index.js:1:355
+      1  100.0%          Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/es_MX/team/index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1    1.0%      LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/es/color/human.js:1:311
+      1  100.0%        LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/es/color/index.js:1:355
+      1  100.0%          Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/es/color/index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1    1.0%      LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/en_IND/internet/index.js:1:355
+      1  100.0%        LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/en_IND/index.js:1:355
+      1  100.0%          Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/en_IND/index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1    1.0%      LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/en_GH/address/street.js:1:311
+      1  100.0%        LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/en_GH/address/index.js:1:355
+      1  100.0%          Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/en_GH/address/index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1    1.0%      LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/en_AU/address/state.js:1:311
+      1  100.0%        LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/en_AU/address/index.js:1:355
+      1  100.0%          Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/en_AU/address/index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1    1.0%      LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/en/team/index.js:1:355
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/en/team/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/el/company/index.js:1:355
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/el/company/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~get /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/az/address/index.js:1:355
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/az/address/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~error /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/send/index.js:267:45
+      1  100.0%        Function: ^onStatError /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/send/index.js:412:57
+      1  100.0%          Function: ^next /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/send/index.js:728:17
+      1  100.0%            Function: ^onstat /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/send/index.js:717:33
+      1    1.0%      LazyCompile: ~equals /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/sdam/server_description.js:118:11
+      1  100.0%        LazyCompile: ~serverUpdateHandler /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/sdam/topology.js:321:24
+      1  100.0%          Function: ^<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/mongodb/lib/sdam/topology.js:481:53
+      1  100.0%            Function: ^emit node:events:474:44
+      1    1.0%      LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:41:35
+      1  100.0%        LazyCompile: ~getStdout node:internal/bootstrap/switches/is_main_thread:125:19
+      1  100.0%          LazyCompile: ~get node:internal/console/constructor:203:14
+      1  100.0%            LazyCompile: ~value node:internal/console/constructor:321:20
+      1    1.0%      LazyCompile: ~createDebug /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/send/node_modules/debug/src/debug.js:63:21
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/send/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~c /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/pt_PT/address/country.js:1:375
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/pt_PT/address/country.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~c /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/es_MX/company/name.js:1:375
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/es_MX/company/name.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~b /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/uk/address/city_name.js:1:375
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/uk/address/city_name.js:1:1
+      1  100.0%          LazyCompile: *Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~b /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/en_GB/address/postcode.js:1:375
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/en_GB/address/postcode.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~asn1.fromDer /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/node-forge/lib/asn1.js:427:24
+      1  100.0%        LazyCompile: ~pki.privateKeyFromPem /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/node-forge/lib/pki.js:51:33
+      1  100.0%          LazyCompile: ~ServiceAccount /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/firebase-admin/lib/app/credential-internal.js:117:16
+      1  100.0%            LazyCompile: ~ServiceAccountCredential /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/firebase-admin/lib/app/credential-internal.js:64:16
+      1    1.0%      LazyCompile: ~allocUnsafe node:buffer:373:42
+      1  100.0%        LazyCompile: ~tryCreateBuffer node:fs:414:25
+      1  100.0%          LazyCompile: ~readFileSync node:fs:450:22
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~W /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/faker.js:1:1328
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~ServerResponse node:_http_server:178:24
+      1  100.0%        LazyCompile: ~parserOnIncoming node:_http_server:852:26
+      1  100.0%          LazyCompile: ~parserOnHeadersComplete node:_http_common:77:33
+      1    1.0%      LazyCompile: ~N /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/ro/phone_number/index.js:1:520
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/ro/phone_number/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~Long.getHighBits /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/long.js:440:43
+      1  100.0%        LazyCompile: ~serializeLong /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/parser/serializer.js:302:23
+      1  100.0%          LazyCompile: ~serializeInto /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/parser/serializer.js:553:23
+      1  100.0%            Function: ^serializeObject /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/parser/serializer.js:260:25
+      1    1.0%      LazyCompile: ~HttpClient /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/firebase-admin/lib/utils/api-request.js:129:16
+      1  100.0%        LazyCompile: ~ServiceAccountCredential /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/firebase-admin/lib/app/credential-internal.js:64:16
+      1  100.0%          LazyCompile: ~cert /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/firebase-admin/lib/app/credential-factory.js:100:14
+      1  100.0%            Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/store/firebase/connection.js:1:1
+      1    1.0%      LazyCompile: ~GetIntrinsic /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/get-intrinsic/index.js:253:39
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/call-bind/index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~Gauge /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/gauge/index.js:19:16
+      1  100.0%        Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/npmlog/log.js:1:1
+      1  100.0%          LazyCompile: *Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1    1.0%      LazyCompile: ~Duplex node:internal/streams/duplex:52:16
+      1  100.0%        LazyCompile: ~Socket node:net:283:16
+      1  100.0%          LazyCompile: ~WriteStream node:tty:85:21
+      1  100.0%            LazyCompile: ~createWritableStdioStream node:internal/bootstrap/switches/is_main_thread:41:35
+      1    1.0%      Function: ~<anonymous> node:internal/fs/rimraf:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1  100.0%            Function: ~<anonymous> node:internal/fs/promises:1:1
+      1    1.0%      Function: ~<anonymous> node:internal/fs/promises:1:1
+      1  100.0%        LazyCompile: ~compileForInternalLoader node:internal/bootstrap/loaders:299:27
+      1  100.0%          LazyCompile: ~nativeModuleRequire node:internal/bootstrap/loaders:332:29
+      1  100.0%            Function: ~<anonymous> node:internal/modules/esm/get_source:1:1
+      1    1.0%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/server.js:1:1
+      1  100.0%        LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            LazyCompile: ~Module.load node:internal/modules/cjs/loader:969:33
+      1    1.0%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/sqlite3/lib/sqlite3-binding.js:1:1
+      1  100.0%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            LazyCompile: *Module.load node:internal/modules/cjs/loader:969:33
+      1    1.0%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/zu_ZA/index.js:1:1
+      1  100.0%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.0%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/zu_ZA/company/suffix.js:1:1
+      1  100.0%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.0%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/uk/name/title.js:1:1
+      1  100.0%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.0%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/nl_BE/address/postcode.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.0%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/ne/address/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.0%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/it/phone_number/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1    1.0%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/it/address/street_suffix.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1    1.0%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/hy/address/secondary_address.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+      1    1.0%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/he/address/county.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.0%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/fr_CH/phone_number/formats.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.0%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/fr_BE/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.0%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/fr_BE/address/street_address.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.0%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/fa/name/last_name.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.0%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/es_MX/lorem/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.0%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/es/company/adjective.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.0%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/en_US/address/city.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.0%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/en_IE/phone_number/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.0%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/en_GH/address/building_number.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.0%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/en_CA/address/state_abbr.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.0%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/en/word/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.0%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/en/address/state.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.0%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/el/finance/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.0%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/de_CH/name/last_name.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.0%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/af_ZA/phone_number/formats.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.0%      Function: ~<anonymous> /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/@faker-js/faker/dist/cjs/locales/af_ZA/index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+      1    1.0%      Function: ^deserializeObject /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%        Function: ^deserializeObject /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%          Function: ^deserializeObject /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/parser/deserializer.js:65:27
+      1  100.0%            LazyCompile: ~deserialize /home/felix/Desktop/fekilo/PROYECTOS/curso_backend_30960/challenge14/node_modules/bson/lib/parser/deserializer.js:36:21
+     38   27.7%    LazyCompile: *compileFunction node:vm:308:25
+     38  100.0%      Function: ^wrapSafe node:internal/modules/cjs/loader:1017:18
+     38  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1057:37
+     38  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1112:37
+     20   52.6%            LazyCompile: *Module._load node:internal/modules/cjs/loader:757:24
+     18   47.4%            Function: ^Module.load node:internal/modules/cjs/loader:969:33
+
