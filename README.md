@@ -23,6 +23,7 @@ En este repositorio puedes acceder a todos los desafíos del curso resueltos por
 - [Desafío 12](./challenge12/) Usando el objeto process
 - [Desafío 13](./challenge13/) Servidor con balance de carga
 - [Desafío 14](./challenge14/) Loggers, gzip y análisis de performance
+- [Desafío 15](./challenge15/) Desplegar nuestro proyecto en la nube
 - ...
 
 ## 🤓 Repo del profe
