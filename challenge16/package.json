@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js -p 8080 -m FORK",
-    "DBscript": "node ./store/script.js",
+    "DBscript": "node ./persistence/store/script.js",
     "start": "0x server.js -p 8080",
     "test": "node benchmark.js"
   },
