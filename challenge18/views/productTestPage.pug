@@ -1,0 +1,8 @@
+extend layout/template.pug
+block content
+  div.container.mt-4.pt-4
+    h1 Test de productos
+    hr.mb-4
+    include components/productList.pug
+block js
+  script(src="/productTest.js")

@@ -1,0 +1,7 @@
+extend layout/template.pug
+block content
+  div.container.mt-4.pt-4
+    div(id="alertLogout" class="alert alert-info")
+      p(class="h2") Hasta luego
+block js
+  script(src="/checkUserSession.js" type="module")
