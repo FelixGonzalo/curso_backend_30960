@@ -1,17 +1,14 @@
-// const Contenedor = require('./store/contenedor_knex')
-// const { config } = require('./store/db_sqlite/config')
-// const DB = new Contenedor(config, 'messages')
-const FirebaseContainer = require('./store/firebase/FirebaseContainer')
-const DB = new FirebaseContainer('messages')
+const MessageRepository = require('./repository/MessageRepository')
+const messageRepository = new MessageRepository()
 const { normalize, denormalize, schema } = require('normalizr')
 
 function getAllMessages() {
-  return DB.getAll()
+  return messageRepository.getAll()
 }
 
 function addMessage({ email, message }) {
   const newMessage = { email, message }
-  return DB.save(newMessage)
+  return messageRepository.save(newMessage)
 }
 
 async function getAllMessagesNormalized() {
@@ -23,7 +20,7 @@ async function getAllMessagesNormalized() {
     const chat = new schema.Entity('chat', {
       messages: [messageSchema],
     })
-    const messages = await DB.getAll()
+    const messages = await messageRepository.getAll()
     const data = { id: 'general', messages }
     const dataNormalized = await normalize(data, chat)
     return dataNormalized
@@ -46,7 +43,7 @@ function addMessageWithAuthor({
     text,
     date: Date.now(),
   }
-  return DB.save(newMessage)
+  return messageRepository.save(newMessage)
 }
 
 module.exports = {

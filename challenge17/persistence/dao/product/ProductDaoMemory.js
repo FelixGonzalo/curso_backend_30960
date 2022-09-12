@@ -1,6 +1,7 @@
 module.exports = class ProductDaoMemory {
   constructor() {
     this.products = []
+    this.cont = 0
   }
 
   init() {
@@ -23,9 +24,9 @@ module.exports = class ProductDaoMemory {
     return this.products[this.getIndex(id)]
   }
 
-  save(personaNueva) {
-    this.products.push(personaNueva)
-    return personaNueva
+  save(obj) {
+    this.products.push({...obj, id: this.cont++})
+    return obj
   }
 
   deleteById(id) {

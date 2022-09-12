@@ -11,6 +11,6 @@ module.exports = function formatDTO(products) {
   if (Array.isArray(products)) {
       return products.map(obj => new ProductDto(obj))
   } else {
-      return new PersonaDTO(products)
+      return new ProductDto(products)
   }
 }
