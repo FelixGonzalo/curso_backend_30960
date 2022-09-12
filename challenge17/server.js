@@ -13,17 +13,9 @@ const session = require('express-session')
 const MongoStore = require('connect-mongo')
 const cluster = require('cluster')
 const os = require('os')
+const argsConfig = require('./argsConfig')
 
-const { PORT, MODE } = parseArgs(process.argv.slice(2), { 
-  alias: { 
-    p: "PORT",
-    m: "MODE",
-  },
-  default: { 
-    PORT: 8080,
-    MODE: "FORK",
-  }
-})
+const { PORT, MODE } = parseArgs(process.argv.slice(2), argsConfig.config)
 
 if (MODE === 'CLUSTER' && cluster.isPrimary) {
   const numCpus = os.cpus().length
@@ -95,10 +87,13 @@ if (MODE === 'CLUSTER' && cluster.isPrimary) {
     }
   }
   
-  function sendProducts() {
-    productsDB.getAllProducts().then((data) => {
-      io.sockets.emit(keys.PRODUCTS, data)
-    })
+  async function sendProducts() {
+    try {
+      const r =  await productsDB.getAllProducts()
+      io.sockets.emit(keys.PRODUCTS, r)
+    } catch (error) {
+      console.error(error)
+    }
   }
   
   function sendMessagesNormalized() {

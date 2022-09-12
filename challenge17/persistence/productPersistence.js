@@ -1,15 +1,14 @@
 const { faker } = require('@faker-js/faker')
-const Contenedor = require('./store/contenedor_knex')
-const { config } = require('./store/db_sqlite/config')
-const DB = new Contenedor(config, 'products')
+const ProductRepository = require('./repository/ProductRepository')
+const productRepository = new ProductRepository()
 
 function getAllProducts() {
-  return DB.getAll()
+  return productRepository.getAll()
 }
 
 function addProduct({ title, price, thumbnail }) {
   const newProduct = { title, price, thumbnail }
-  return DB.save(newProduct)
+  return productRepository.save(newProduct)
 }
 
 function getProductsTest(num) {
