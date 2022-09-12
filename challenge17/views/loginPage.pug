@@ -1,0 +1,14 @@
+extend layout/template.pug
+block content
+  div.container.mt-4.pt-4
+    .card 
+      .card-body
+        h1(class="mb-4") Login de Usuario
+        form(id="loginForm")
+          input(type="text", name="email", id="email", class="form-control" placeholder="Ingrese su correo")
+          input(type="password", name="password", id="password", class="form-control mt-2", placeholder="Ingrese su contraseña", autocomplete="on")
+          button(type="submit", class="btn btn-success mt-4") Login
+      .card-footer
+        a(href="./register") Ir a Register
+block js
+  script(src="/login.js")

@@ -1,0 +1,26 @@
+{{#if products}}
+  <div class='table-responsive'>
+    <table class='table table-hover'>
+      <thead>
+        <tr>
+          <th>NOMBRE</th>
+          <th>PRECIO</th>
+          <th>FOTO</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each products}}
+          <tr>
+            <td>{{{title}}}</td>
+            <td>{{{price}}}</td>
+            <td width='100px'>
+              <img src='{{{thumbnail}}}' alt='{{{title}}}' width='100px' />
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+{{else}}
+  <div class='alert alert-danger'>No hay productos</div>
+{{/if}}

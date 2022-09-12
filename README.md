@@ -25,6 +25,7 @@ En este repositorio puedes acceder a todos los desafíos del curso resueltos por
 - [Desafío 14](./challenge14/) Loggers, gzip y análisis de performance
 - [Desafío 15](./challenge15/) Desplegar nuestro proyecto en la nube
 - [Desafío 16](./challenge16/) Dividir en capas nuestro proyecto
+- [Desafío 17](./challenge17/) Mejorar la arquitectura de nuestra API
 - ...
 
 ## 🤓 Repo del profe
