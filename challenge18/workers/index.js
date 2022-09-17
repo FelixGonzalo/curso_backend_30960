@@ -1,5 +1,5 @@
-const {fork} = require('child_process')
-const path = require('path')
+import { fork } from 'child_process'
+import path from 'path'
 
 function worker_getRandomsNoBloqueante(cant = 100000000, res) {
   const computo = fork(path.resolve(__dirname, 'worker_getRandomsNoBloqueante.js'))
@@ -12,6 +12,6 @@ function worker_getRandomsNoBloqueante(cant = 100000000, res) {
   })
 }
 
-module.exports = {
+export {
   worker_getRandomsNoBloqueante
 }

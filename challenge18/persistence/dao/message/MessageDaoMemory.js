@@ -1,4 +1,4 @@
-module.exports = class MessageDaoMemory {
+export default class MessageDaoMemory {
   constructor() {
     this.messages = []
     this.cont = 0

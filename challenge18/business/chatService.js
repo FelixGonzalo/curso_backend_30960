@@ -1,5 +1,5 @@
-const chatPersistence = require('../persistence/chatPersistence')
-const logger = require('../logger')
+import chatPersistence from '../persistence/chatPersistence.js'
+import logger from '../logger.js'
 
 async function getTestMessages() {
   return chatPersistence.getAllMessagesNormalized()
@@ -31,7 +31,7 @@ function validateMessage({email, text}) {
   return false
 }
 
-module.exports = {
+export default {
   getTestMessages,
   addMessage,
 }

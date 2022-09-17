@@ -1,9 +1,9 @@
-const ProductDaoSQLite = require('./ProductDaoSQLite')
-const ProductDaoMemory = require('./ProductDaoMemory')
-const { config } = require('../../store/db_sqlite/config')
+import ProductDaoSQLite from './ProductDaoSQLite.js'
+import ProductDaoMemory from './ProductDaoMemory.js'
+import {config} from '../../store/db_sqlite/config.js'
 
-const parseArgs = require('minimist')
-const argsConfig = require('../../../argsConfig')
+import parseArgs from 'minimist'
+import argsConfig from '../../../argsConfig.js'
 const { DAO_PRODUCT } = parseArgs(process.argv.slice(2), argsConfig.config)
 
 const option = DAO_PRODUCT
@@ -19,7 +19,7 @@ switch (option) {
     dao.init()
 }
 
-module.exports = class ProductDaoFactory {
+export default class ProductDaoFactory {
   static instance
 
   constructor() {

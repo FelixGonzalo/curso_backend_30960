@@ -1,7 +1,7 @@
-const ProductDaoFactory = require('../dao/product/ProductDaoFactory')
+import ProductDaoFactory from '../dao/product/ProductDaoFactory.js'
 const productDaoFactory = new ProductDaoFactory()
 
-module.exports = class ProductRepository {
+export default class ProductRepository {
     constructor() {
         this.dao = productDaoFactory.getDao()
     }

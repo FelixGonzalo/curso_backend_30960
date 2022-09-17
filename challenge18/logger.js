@@ -1,4 +1,4 @@
-const pino = require('pino')
+import pino from 'pino'
 
 function buildDevLogger() {
   const devLogger = pino('debug.log')
@@ -8,4 +8,4 @@ function buildDevLogger() {
 
 let logger = buildDevLogger()
 
-module.exports = logger
+export default logger

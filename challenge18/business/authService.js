@@ -1,6 +1,6 @@
-const authPersistence = require('../persistence/authPersistence')
-const bcrypt = require('bcrypt')
-const logger = require('../logger')
+import authPersistence from '../persistence/authPersistence.js'
+import bcrypt from 'bcrypt'
+import logger from '../logger.js'
 const saltRounds = 2
 
 async function registerUser(email, password) {
@@ -58,7 +58,7 @@ function validateUserData(email, password) {
   return true
 }
 
-module.exports = {
+export default {
   registerUser,
   loginUser,
 }

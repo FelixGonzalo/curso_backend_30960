@@ -14,7 +14,7 @@ class MessageDto {
   }
 }
 
-module.exports = function formatDTO(messages) {
+export default function formatDTO(messages) {
   if (Array.isArray(messages)) {
     return messages.map(obj => new MessageDto(obj))
   } else {

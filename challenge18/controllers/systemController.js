@@ -1,9 +1,9 @@
-const systemService = require('../business/systemService')
+import systemService from '../business/systemService.js'
 
 function getSystemInformation(req, res){
   res.json(systemService.getSystemInformation())
 }
 
-module.exports = {
+export default {
   getSystemInformation
 }

@@ -1,5 +1,5 @@
 {
-  "name": "challenge17",
+  "name": "challenge18",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -7,13 +7,15 @@
     "dev": "nodemon server.js -p 8080 -m FORK",
     "DBscript": "node ./persistence/store/script.js",
     "start": "0x server.js -p 8080",
-    "test": "node benchmark.js"
+    "benchmark": "node benchmark.js",
+    "test": "mocha server.test.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "autocannon": "7.9.0",
+    "axios": "0.27.2",
     "bcrypt": "5.0.1",
     "cluster": "0.7.7",
     "compression": "1.7.4",
@@ -32,7 +34,9 @@
     "socket.io": "4.5.0",
     "sqlite3": "5.0.8"
   },
+  "type": "module",
   "devDependencies": {
-    "@faker-js/faker": "7.2.0"
+    "@faker-js/faker": "7.2.0",
+    "mocha": "10.0.0"
   }
 }

@@ -1,7 +1,7 @@
-const MessageDaoFactory = require('../dao/message/MessageDaoFactory')
+import MessageDaoFactory from '../dao/message/MessageDaoFactory.js'
 const messageDaoFactory = new MessageDaoFactory()
 
-module.exports = class MessageRepository {
+export default class MessageRepository {
     constructor() {
         this.dao = messageDaoFactory.getDao()
     }

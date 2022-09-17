@@ -1,4 +1,4 @@
-module.exports = class ProductDaoMemory {
+export default class ProductDaoMemory {
   constructor() {
     this.products = []
     this.cont = 0

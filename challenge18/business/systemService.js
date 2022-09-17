@@ -1,4 +1,4 @@
-const os = require('os')
+import os from 'os'
 
 function getSystemInformation(){
   return {
@@ -21,6 +21,6 @@ function getSystemInformation(){
   }
 }
 
-module.exports = {
+export default {
   getSystemInformation
 }

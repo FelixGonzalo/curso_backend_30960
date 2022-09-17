@@ -1,4 +1,4 @@
-const authService= require('../business/authService')
+import authService from '../business/authService.js'
 
 async function register(req, res) {
   const { email, password } = req.body
@@ -97,7 +97,7 @@ function checkSession(req, res) {
   })
 }
 
-module.exports = {
+export default {
   register,
   login,
   logout,

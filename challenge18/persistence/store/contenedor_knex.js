@@ -1,6 +1,6 @@
-const knex = require('knex')
+import knex from 'knex'
 
-module.exports = class Contenedor {
+export default class Contenedor {
   constructor(config, tableName) {
     this.knex = knex(config)
     this.tableName = tableName

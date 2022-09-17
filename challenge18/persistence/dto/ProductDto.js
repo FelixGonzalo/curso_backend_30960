@@ -7,7 +7,7 @@ class ProductDto {
   }
 }
 
-module.exports = function formatDTO(products) {
+export default function formatDTO(products) {
   if (Array.isArray(products)) {
       return products.map(obj => new ProductDto(obj))
   } else {

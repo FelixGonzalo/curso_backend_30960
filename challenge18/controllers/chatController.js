@@ -1,4 +1,4 @@
-const chatService= require('../business/chatService')
+import chatService from '../business/chatService.js'
 
 async function getTestMessages(req, res) {
   try {
@@ -19,7 +19,7 @@ async function postMessage(req, res) {
   }
 }
 
-module.exports = {
+export default {
   postMessage,
   getTestMessages,
 }

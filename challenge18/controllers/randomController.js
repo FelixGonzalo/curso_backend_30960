@@ -1,5 +1,5 @@
-const randomService = require('../business/randomService')
-const { worker_getRandomsNoBloqueante } = require('../workers')
+import randomService from '../business/randomService.js'
+import { worker_getRandomsNoBloqueante }  from '../workers/index.js'
 
 function getRandoms(req, res) {
   const cant = req.query.cant || 100000000
@@ -12,7 +12,7 @@ async function getRandomsNoBloqueante(req, res) {
   worker_getRandomsNoBloqueante(cant, res)
 }
 
-module.exports = {
+export default {
   getRandoms,
   getRandomsNoBloqueante
 }

@@ -7,6 +7,6 @@ function handleGetRandoms(cant = 100000000) {
   return numbers
 }
 
-module.exports = {
+export default {
   handleGetRandoms
 }

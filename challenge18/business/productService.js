@@ -1,6 +1,5 @@
-const logger = require('../logger')
-const productPersistence = require('../persistence/productPersistence')
-
+import logger from '../logger.js'
+import productPersistence from '../persistence/productPersistence.js'
 
 async function addProduct({title, price, thumbnail}) {
   try {
@@ -21,6 +20,9 @@ async function getProductsTest() {
   return productPersistence.getProductsTest(5);
 }
 
+async function getProducts() {
+  return productPersistence.getAllProducts();
+}
 
 function validateProduct({title, price, thumbnail}) {
   if (!title || !price || !thumbnail || !title.trim() || !thumbnail.trim()) {
@@ -34,7 +36,8 @@ function validateProduct({title, price, thumbnail}) {
 }
 
 
-module.exports = {
+export default {
   addProduct,
   getProductsTest,
+  getProducts,
 }

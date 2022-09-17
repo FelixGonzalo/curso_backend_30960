@@ -1,5 +1,5 @@
-const Contenedor = require('./store/contenedor_knex')
-const { config } = require('./store/db_sqlite/config')
+import Contenedor from './store/contenedor_knex.js'
+import {config} from './store/db_sqlite/config.js'
 const DB = new Contenedor(config, 'users')
 
 function addUser({ email, password }) {
@@ -10,7 +10,7 @@ function getAllUsers() {
   return DB.getAll()
 }
 
-module.exports = {
+export default {
   addUser,
   getAllUsers,
 }

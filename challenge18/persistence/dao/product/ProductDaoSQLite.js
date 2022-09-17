@@ -1,7 +1,7 @@
-const knex = require('knex')
-const formatDTO = require('../../dto/ProductDto')
+import knex from 'knex'
+import formatDTO from '../../dto/ProductDto.js'
 
-module.exports = class PersonasDaoSQLite {
+export default class PersonasDaoSQLite {
   constructor(config) {
     this.knex = knex(config)
     this.tableName = 'products'

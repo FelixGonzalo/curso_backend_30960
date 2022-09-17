@@ -1,6 +1,6 @@
-const MessageRepository = require('./repository/MessageRepository')
+import MessageRepository from './repository/MessageRepository.js'
 const messageRepository = new MessageRepository()
-const { normalize, denormalize, schema } = require('normalizr')
+import { normalize, denormalize, schema } from 'normalizr'
 
 function getAllMessages() {
   return messageRepository.getAll()
@@ -46,7 +46,7 @@ function addMessageWithAuthor({
   return messageRepository.save(newMessage)
 }
 
-module.exports = {
+export default {
   getAllMessages,
   addMessage,
   addMessageWithAuthor,

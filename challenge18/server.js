@@ -1,19 +1,19 @@
-require('dotenv').config()
-const parseArgs = require('minimist')
-require('./persistence/store/firebase/connection')
+import {} from 'dotenv/config'
+import parseArgs from 'minimist'
+import './persistence/store/firebase/connection.js'
 
-const express = require('express')
-const pageRouter = require('./routes/pages')
-const apiRouter = require('./routes/api')
-const { Server: HttpServer } = require('http')
-const { Server: IOServer } = require('socket.io')
-const productsDB = require('./persistence/productPersistence')
-const chatDB = require('./persistence/chatPersistence')
-const session = require('express-session')
-const MongoStore = require('connect-mongo')
-const cluster = require('cluster')
-const os = require('os')
-const argsConfig = require('./argsConfig')
+import express from 'express'
+import pageRouter from './routes/pages.js'
+import apiRouter from './routes/api.js'
+import { Server as HttpServer } from 'http'
+import { Server as IOServer } from 'socket.io'
+import productsDB from './persistence/productPersistence.js'
+import chatDB from './persistence/chatPersistence.js'
+import session from 'express-session'
+import MongoStore from 'connect-mongo'
+import cluster from 'cluster'
+import os from 'os'
+import argsConfig from './argsConfig.js'
 
 const { PORT, MODE } = parseArgs(process.argv.slice(2), argsConfig.config)
 

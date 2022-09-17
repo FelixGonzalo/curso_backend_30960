@@ -1,5 +1,5 @@
-const { faker } = require('@faker-js/faker')
-const ProductRepository = require('./repository/ProductRepository')
+import {faker} from '@faker-js/faker'
+import ProductRepository from './repository/ProductRepository.js'
 const productRepository = new ProductRepository()
 
 function getAllProducts() {
@@ -26,7 +26,7 @@ function getProductsTest(num) {
   return products
 }
 
-module.exports = {
+export default {
   getAllProducts,
   addProduct,
   getProductsTest,

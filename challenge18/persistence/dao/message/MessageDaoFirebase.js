@@ -1,7 +1,7 @@
-const admin = require('firebase-admin')
-const formatDTO = require('../../dto/MessageDto')
+import admin from 'firebase-admin'
+import formatDTO from '../../dto/MessageDto.js'
 
-module.exports = class MessageDaoFirebase {
+export default class MessageDaoFirebase {
   constructor() {
     this.db = admin.firestore()
     this.query = this.db.collection('messages')

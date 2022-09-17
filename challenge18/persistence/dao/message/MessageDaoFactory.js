@@ -1,8 +1,8 @@
-const MessageDaoFirebase = require('./MessageDaoFirebase')
-const MessageDaoMemory = require('./MessageDaoMemory')
+import MessageDaoFirebase from './MessageDaoFirebase.js'
+import MessageDaoMemory from './MessageDaoMemory.js'
 
-const parseArgs = require('minimist')
-const argsConfig = require('../../../argsConfig')
+import parseArgs from 'minimist'
+import argsConfig from '../../../argsConfig.js'
 const { DAO_MESSAGE } = parseArgs(process.argv.slice(2), argsConfig.config)
 
 const option = DAO_MESSAGE
@@ -18,7 +18,7 @@ switch (option) {
     dao.init()
 }
 
-module.exports = class MessageDaoFactory {
+export default class MessageDaoFactory {
   static instance
 
   constructor() {
