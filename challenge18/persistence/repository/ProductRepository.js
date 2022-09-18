@@ -21,4 +21,8 @@ export default class ProductRepository {
     async deleteById(id) {
       return this.dao.deleteById(id)
     }
+
+    async updateById(id, newObj) {
+      return this.dao.updateById(id, newObj)
+    }
 }

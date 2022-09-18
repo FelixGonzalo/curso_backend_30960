@@ -10,11 +10,10 @@ async function addProduct({title, price, thumbnail}) {
     logger.info(`Registro de producto exitosa`)
     return res;
   } catch (error) {
-    logger.error('Error en postProduct: ' + error.message)
-    return error
+    logger.error('Error en addProduct: ' + error.message)
+    throw new Error(error.message)
   }
 }
-
 
 async function getProductsTest() {
   return productPersistence.getProductsTest(5);
@@ -23,6 +22,15 @@ async function getProductsTest() {
 async function getProducts() {
   return productPersistence.getAllProducts();
 }
+
+async function deleteProduct(id){
+  return productPersistence.deleteProduct(id);
+}
+
+async function updateProduct(id, {title, price, thumbnail}){
+  return productPersistence.updateProduct(id, {title, price, thumbnail});
+}
+
 
 function validateProduct({title, price, thumbnail}) {
   if (!title || !price || !thumbnail || !title.trim() || !thumbnail.trim()) {
@@ -35,9 +43,10 @@ function validateProduct({title, price, thumbnail}) {
   return false
 }
 
-
 export default {
   addProduct,
   getProductsTest,
   getProducts,
+  deleteProduct,
+  updateProduct,
 }

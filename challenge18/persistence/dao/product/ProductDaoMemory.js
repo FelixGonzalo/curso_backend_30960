@@ -1,7 +1,7 @@
 export default class ProductDaoMemory {
   constructor() {
     this.products = []
-    this.cont = 0
+    this.cont = 1
   }
 
   init() {
@@ -13,7 +13,7 @@ export default class ProductDaoMemory {
   }
 
   getIndex(id) {
-    return this.products.findIndex(persona => persona.id === id)
+    return this.products.findIndex(product => product.id == id)
   }
 
   getAll() {
@@ -25,13 +25,20 @@ export default class ProductDaoMemory {
   }
 
   save(obj) {
-    this.products.push({...obj, id: this.cont++})
-    return obj
+    const newObj = {...obj, id: this.cont++}
+    this.products.push(newObj)
+    return newObj
   }
 
   deleteById(id) {
-    const [borrada] = this.products.splice(this.getIndex(id), 1)
-    return borrada
+    try {
+      const index = this.getIndex(id)
+      if (index === -1 ) throw new Error('El producto no existe')
+      const [borrada] = this.products.splice(this.getIndex(id), 1)
+      return borrada
+    } catch (error) {
+      throw new Error(error.message)
+    }
   }
 
   deleteAll() {
@@ -39,9 +46,14 @@ export default class ProductDaoMemory {
   }
 
   updateById(id, nuevo) {
-    const index = this.getIndex(id)
-    const actualizado = { ...this.products[index], ...nuevo }
-    this.products.splice(index, 1, actualizado)
-    return actualizado
+    try {
+      const index = this.getIndex(id)
+      if (index === -1 ) throw new Error('El producto no existe')
+      const actualizado = { ...this.products[index], ...nuevo }
+      this.products.splice(index, 1, actualizado)
+      return actualizado
+    } catch (error) {
+      throw new Error(error.message)
+    }
   }
 }

@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon server.js -p 8080 -m FORK",
     "DBscript": "node ./persistence/store/script.js",
-    "start": "0x server.js -p 8080",
+    "start": "node server.js -p 8080",
+    "benchmark:start": "0x server.js -p 8080",
     "benchmark": "node benchmark.js",
     "test": "mocha server.test.js"
   },
@@ -37,6 +38,8 @@
   "type": "module",
   "devDependencies": {
     "@faker-js/faker": "7.2.0",
-    "mocha": "10.0.0"
+    "chai": "4.3.6",
+    "mocha": "10.0.0",
+    "supertest": "6.2.4"
   }
 }

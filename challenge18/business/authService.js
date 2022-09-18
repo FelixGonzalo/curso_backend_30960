@@ -18,7 +18,7 @@ async function registerUser(email, password) {
     return addedUser
   } catch (error) {
     logger.error('Error en registerUser: ' + error.message)
-    return error;
+    throw new Error(error.message)
   }
 }
 
@@ -37,7 +37,7 @@ async function loginUser(email, password) {
     return email
   } catch (error) {
     logger.error('Error en login: ' + error.message)
-    return error;
+    throw new Error(error.message)
   }
 }
 

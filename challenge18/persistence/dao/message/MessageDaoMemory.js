@@ -1,7 +1,7 @@
 export default class MessageDaoMemory {
   constructor() {
     this.messages = []
-    this.cont = 0
+    this.cont = 1
   }
 
   init() {
@@ -25,8 +25,9 @@ export default class MessageDaoMemory {
   }
 
   save(obj) {
-    this.messages.push({...obj, id: this.cont++})
-    return obj
+    const newObj = {...obj, id: this.cont++}
+    this.products.push(newObj)
+    return newObj
   }
 
   deleteById(id) {

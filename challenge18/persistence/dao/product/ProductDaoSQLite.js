@@ -25,8 +25,7 @@ export default class PersonasDaoSQLite {
       const products = await this.knex(this.tableName).select('*')
       return formatDTO(products) 
     } catch (error) {
-      console.error(error)
-      return error
+      throw new Error(error.message)
     }
   }
 
@@ -35,8 +34,7 @@ export default class PersonasDaoSQLite {
       const product = await this.knex(this.tableName).select('*').where('id', id)
       return formatDTO(product) 
     } catch (error) {
-      console.error(error)
-      return error
+      throw new Error(error.message)
     }
   }
 
@@ -45,18 +43,27 @@ export default class PersonasDaoSQLite {
       const productId = await this.knex(this.tableName).insert(obj)
       return productId
     } catch (error) {
-      console.error(error)
-      return error
+      throw new Error(error.message)
     }
   }
 
   async deleteById(id) {
     try {
-      const productId = await this.knex.from(this.tableName).where('id', id).del()
-      return productId
+      const res = await this.knex.from(this.tableName).where('id', id).del()
+      if (res === 0) throw new Error('El producto no existe')
+      return id
     } catch (error) {
-      console.error(error)
-      return error
+      throw new Error(error.message)
+    }
+  }
+
+  async updateById(id, newObj) {
+    try {
+      const res = await this.knex.from(this.tableName).where('id', id).update(newObj)
+      if (res === 0) throw new Error('El producto no existe')
+      return {id, ...newObj}
+    } catch (error) {
+      throw new Error(error.message)
     }
   }
 }

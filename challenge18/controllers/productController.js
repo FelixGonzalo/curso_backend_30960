@@ -3,11 +3,10 @@ import productService from '../business/productService.js'
 async function postProduct(req, res) {
   try {
     const { title, price, thumbnail } = req.body
-    console.log("mira", { title, price, thumbnail })
     const productID = await productService.addProduct({title, price, thumbnail})
-    res.json({ productID })
+    res.status(201).json({ productID })
   } catch (error) {
-    res.status(500).json({ error: error.message || 'Error al agregar producto' })
+    res.status(400).json({ error: error.message || 'Error al agregar producto' })
   }
 }
 
@@ -29,8 +28,30 @@ async function getProducts(req, res) {
   }
 }
 
+async function deleteProduct(req, res) {
+  try {
+    const { id } = req.params
+    const product = await productService.deleteProduct(id)
+    res.json(product)
+  } catch (error) {
+    res.status(400).json({ error: error.message || 'Error al eliminar el producto' })
+  }
+}
+
+async function updateProduct(req, res) {
+  try {
+    const { id, title, price, thumbnail } = req.body
+    const product = await productService.updateProduct(id, { title, price, thumbnail })
+    res.json(product)
+  } catch (error) {
+    res.status(400).json({ error: error.message || 'Error al actualizar producto' })
+  }
+}
+
 export default {
   postProduct,
   getProductsTest,
   getProducts,
+  deleteProduct,
+  updateProduct,
 }

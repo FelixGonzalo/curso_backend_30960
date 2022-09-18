@@ -20,6 +20,8 @@ router.get('/chat/test/normalized', chatController.getTestMessages)
 router.post('/products/', productController.postProduct)
 router.get('/products/test', productController.getProductsTest)
 router.get('/products', productController.getProducts)
+router.delete('/products/:id', productController.deleteProduct)
+router.put('/products', productController.updateProduct)
 
 
 router.get('/randoms/', randomController.getRandoms)

@@ -15,7 +15,7 @@ async function addMessage({ email, name, lastName, age, nick, avatar, text }) {
     return res
   } catch (error) {
     logger.error('Error en addMessage: ' + error.message)
-    return error
+    throw new Error(error.message)
   }
 }
 

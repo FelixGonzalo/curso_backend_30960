@@ -26,8 +26,18 @@ function getProductsTest(num) {
   return products
 }
 
+function deleteProduct(id) {
+  return productRepository.deleteById(id)
+}
+
+function updateProduct(id, newProduct) {
+  return productRepository.updateById(id, newProduct)
+}
+
 export default {
   getAllProducts,
   addProduct,
   getProductsTest,
+  deleteProduct,
+  updateProduct,
 }
