@@ -1,9 +1,12 @@
-# Desafío 17: Mejorar la arquitectura de nuestra API
+# Desafío 18: Testeamos nuestra API REST
 
-Implementar en la capa de persistencia DAO, DTO, repository y Singleton para productos y mensajes. En este caso por defecto se ha colocado que use en memoria pero para productos puede usar SQLite y para mensajes Firebase (revisar el archivo argsConfig.js).
+- Se implementa test con mocha para api de productos.
+- Refactor:
+  - Uso de ECMAScript modules.
+  - Solución de bugs gracias a los tests.
 
 
-**Este desafío es la mejora del Desafío 16.**
+**Este desafío es la mejora del Desafío 17.**
 
 1. Ejecute el script **DBscript** para crear o resetear:
 
