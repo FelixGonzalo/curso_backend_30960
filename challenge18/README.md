@@ -5,6 +5,10 @@
   - Uso de ECMAScript modules.
   - Solución de bugs gracias a los tests.
 
+---
+![Captura](./public/captura.png)
+
+---
 
 **Este desafío es la mejora del Desafío 17.**
 
