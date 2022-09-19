@@ -28,7 +28,7 @@ En este repositorio puedes acceder a todos los desafíos del curso resueltos por
 - [Desafío 17](./challenge17/) Mejorar la arquitectura de nuestra API
 - [Desafío 18](./challenge18/) Testeamos nuestra API REST
 - [Desafío 19](./challenge19/) Reformar para usar GraphQL
-- [Desafío 20](./challenge20nestjs/) Reformar para usar otro Framework
+- [Desafío 20](https://github.com/FelixGonzalo/app_demo_nestjs) Reformar para usar otro Framework
 - ...
 
 ## 🤓 Repo del profe
