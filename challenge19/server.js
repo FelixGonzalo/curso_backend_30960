@@ -3,8 +3,10 @@ import parseArgs from 'minimist'
 import './persistence/store/firebase/connection.js'
 
 import express from 'express'
+import { graphqlHTTP } from 'express-graphql'
 import pageRouter from './routes/pages.js'
 import apiRouter from './routes/api.js'
+import productGraphqlController from './controllers/productGraphqlController.js'
 import { Server as HttpServer } from 'http'
 import { Server as IOServer } from 'socket.io'
 import productsDB from './persistence/productPersistence.js'
@@ -59,6 +61,7 @@ if (MODE === 'CLUSTER' && cluster.isPrimary) {
   app.set('view engine', 'pug')
   app.use('/', pageRouter)
   app.use('/api', apiRouter)
+  app.use('/graphql', graphqlHTTP(productGraphqlController))
   
   io.on('connection', main)
   httpServer.listen(PORT, () => console.log(`Open server on port ${PORT} - PID(${process.pid}) - (${new Date().toLocaleString()})`))

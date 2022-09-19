@@ -1,16 +1,68 @@
-# Desafío 18: Testeamos nuestra API REST
+# Desafío 19: Reformar para usar GraphQL
 
-- Se implementa test con mocha para api de productos.
-- Refactor:
-  - Uso de ECMAScript modules.
-  - Solución de bugs gracias a los tests.
+- Se implementa GraphQL para manejar el CRUD de producto. Revisar toda la lógica en el controlador productGraphqlController.js
 
 ---
 ![Captura](./public/captura.png)
 
 ---
 
-**Este desafío es la mejora del Desafío 17.**
+Queries:
+
+- Get products
+```
+{
+	getProducts {
+		id,
+		title,
+		price,
+	}
+}
+```
+
+- Add product
+```
+mutation {
+  addProduct(datos: {
+    title: "product graphql 3",
+    price: 10.5,
+    thumbnail: "https://lh3.googleusercontent.com/ogw/AOh-ky2CdqY2t24jIxDIHAt3WcEMB0UbaodZsnyL8Ip1fA=s64-c-mo"
+  }) {
+    id,
+		title
+  }
+}
+```
+
+- Delete product
+```
+mutation {
+  deleteProduct(id: 2) {
+    id
+		title
+  }
+}
+```
+
+- Update product
+```
+mutation {
+  updateProduct(datos: {
+		id: 3,
+    title: "product graphql 3 actualizado",
+    price: 10.5,
+    thumbnail: "https://lh3.googleusercontent.com/ogw/AOh-ky2CdqY2t24jIxDIHAt3WcEMB0UbaodZsnyL8Ip1fA=s64-c-mo"
+  }) {
+    id,
+		title
+  }
+}
+```
+
+
+
+
+**Este desafío tiene como base el Desafío 18.**
 
 1. Ejecute el script **DBscript** para crear o resetear:
 

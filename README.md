@@ -27,6 +27,7 @@ En este repositorio puedes acceder a todos los desafíos del curso resueltos por
 - [Desafío 16](./challenge16/) Dividir en capas nuestro proyecto
 - [Desafío 17](./challenge17/) Mejorar la arquitectura de nuestra API
 - [Desafío 18](./challenge18/) Testeamos nuestra API REST
+- [Desafío 19](./challenge19/) Reformar para usar GraphQL
 - ...
 
 ## 🤓 Repo del profe
